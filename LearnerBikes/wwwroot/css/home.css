@@ -1,0 +1,69 @@
+﻿.banner-wrapper {
+    height: 45vh;
+    background-image: linear-gradient(#272727, #FFA200);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-contents-wrapper {
+}
+
+#banner-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 25px 0 25px 0;
+}
+
+#banner-subtitle {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 25px 0 25px 0;
+}
+
+a.browse-button {
+    margin: 25px 0 25px 0;
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    background-color: #ffa500;
+    text-align: center;
+    transition: all 0.2s;
+}
+a.browse-button:hover {
+    background-color: #cc8400;
+}
+
+.browse-button {
+    color: #000;
+    background-color: #FFA200;
+}
+
+.brands-section-wrapper {
+    background-color: #D2D2D2;
+}
+
+.brands-section {
+    display: flex;
+    color: #000;
+}
+
+.brands-section__text-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 80px 160px 80px 160px;
+    text-align: center;
+}
+
+.brands-section__text {
+}
+
+.brands-section__img {
+    width: 30%;
+    height: auto;
+    padding: 80px 160px 80px 160px;
+}
