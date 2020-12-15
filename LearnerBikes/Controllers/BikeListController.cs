@@ -17,18 +17,22 @@ namespace LearnerBikes.Controllers
             _db = db;
         }
 
-        public IActionResult Index(String filterName, String filterValue)
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Index(BikeListViewModel model)
         {
-            IEnumerable<Bike> objList = _db.Bikes;
-            
-            if (filterName != null)
+            model.Bikes = _db.Bikes;
+
+            //IEnumerable<Bike> objList = _db.Bikes;
+
+            if (model.BikeFilters != null)
             {
-                if (filterName.Equals("make"))
+                if (model.BikeFilters.Make != null)
                 {
-                    objList = objList.Where(s => s.Make.Contains(filterValue));
+                    model.Bikes = model.Bikes.Where(s => s.Make.Contains(model.BikeFilters.Make));
                 }
             }
-            return View(objList);
+
+            return View(model);
         }
     }
 }

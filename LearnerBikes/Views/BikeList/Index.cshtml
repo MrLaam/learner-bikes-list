@@ -1,4 +1,4 @@
-﻿@model IEnumerable<LearnerBikes.Models.Bike>
+﻿@model LearnerBikes.Models.BikeListViewModel
 
 <link rel="stylesheet" href="~/css/bikelist.css" />
 
@@ -8,19 +8,34 @@
             <img class="filter-icon" src="~/images/filtericon.png" onclick="toggleDisplay('filter')" />
         </div>
         <div class="filter-wrapper" id="filter">
-            <a asp-controller="BikeList" asp-action="Index" asp-route-filterName="make" asp-route-filterValue="Aprilia">Aprilia</a>
-            <a asp-controller="BikeList" asp-action="Index" asp-route-filterName="make" asp-route-filterValue="KTM">KTM</a>
-            <a asp-controller="BikeList" asp-action="Index" asp-route-filterName="make" asp-route-filterValue="Yamaha">Yamaha</a>
-            <a asp-controller="BikeList" asp-action="Index" asp-route-filterName="make" asp-route-filterValue="Honda">Honda</a>
+            @*<a asp-controller="BikeList" asp-action="Index" asp-route-filterName="make" asp-route-filterValue="Aprilia">Aprilia</a>
+
+            <p>Make</p>
+            <select>
+                <option selected disabled>Choose Make...</option>
+                <option asp-controller="BikeList" asp-action="Index" asp-route-filterName="make" asp-route-filterValue="Aprilia">Aprilia</option>
+                <option>KTM</option>
+                <option>Honda</option>
+                <option>Yamaha</option>
+            </select>*@
+
+            <form asp-action="Index" asp-controller="BikeList">
+                <select asp-for="BikeFilters.Make">
+                    <option value="Aprilia">Aprilia</option>
+                    <option value="KTM">KTM</option>
+                </select>
+                @*<input asp-for="BikeFilters.Make" placeholder="Enter a make"/>*@
+                <input type="submit" />
+            </form>
         </div>
 
     </div>
 
     <div class="bike-list-wrapper">
-        @if (Model.Count() > 0)
+        @if (Model.Bikes.Count() > 0)
         {
         <div class="card-wrapper">
-            @foreach (var bike in Model)
+            @foreach (var bike in Model.Bikes)
             {
             <div class="bike-card">
                 <img class="bike-image" src="@bike.ImageUrl" />
