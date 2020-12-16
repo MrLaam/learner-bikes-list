@@ -6,3 +6,7 @@
         filterSection.style.display = "block";
     }
 }
+
+function applyFilters() {
+    document.getElementById("bikeFilterForm").submit();
+}

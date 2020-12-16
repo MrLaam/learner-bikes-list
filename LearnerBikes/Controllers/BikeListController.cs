@@ -17,7 +17,6 @@ namespace LearnerBikes.Controllers
             _db = db;
         }
 
-        [HttpPost, ValidateAntiForgeryToken]
         public IActionResult Index(BikeListViewModel model)
         {
             model.Bikes = _db.Bikes;
@@ -28,6 +27,11 @@ namespace LearnerBikes.Controllers
             {
                 if (model.BikeFilters.Make != null)
                 {
+                    if(model.BikeFilters.Make.Equals("Any Make"))
+                    {
+                        model.Bikes = _db.Bikes;
+                        return View(model);
+                    }
                     model.Bikes = model.Bikes.Where(s => s.Make.Contains(model.BikeFilters.Make));
                 }
             }

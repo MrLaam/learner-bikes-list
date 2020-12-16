@@ -19,13 +19,15 @@
                 <option>Yamaha</option>
             </select>*@
 
-            <form asp-action="Index" asp-controller="BikeList">
+            <form id="bikeFilterForm" onchange="applyFilters()" asp-action="Index" asp-controller="BikeList">
                 <select asp-for="BikeFilters.Make">
+                    <option selected="selected" value="Any Make">Make (Any)</option>
                     <option value="Aprilia">Aprilia</option>
+                    <option value="Honda">Honda</option>
                     <option value="KTM">KTM</option>
+                    <option value="Yamaha">Yamaha</option>
                 </select>
                 @*<input asp-for="BikeFilters.Make" placeholder="Enter a make"/>*@
-                <input type="submit" />
             </form>
         </div>
 
