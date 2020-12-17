@@ -34,6 +34,8 @@ namespace LearnerBikes.Controllers
                     }
                     model.Bikes = model.Bikes.Where(s => s.Make.Contains(model.BikeFilters.Make));
                 }
+
+                    
             }
 
             return View(model);
