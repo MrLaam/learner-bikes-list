@@ -1,4 +1,5 @@
 ﻿using LearnerBikes.Data;
+using LearnerBikes.Helpers;
 using LearnerBikes.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -20,10 +21,12 @@ namespace LearnerBikes.Controllers
         public IActionResult Index(BikeListViewModel model)
         {
             model.Bikes = _db.Bikes;
+            BikeFilterHelper helper = new BikeFilterHelper();
+            model = helper.applyFilters(model);
 
             //IEnumerable<Bike> objList = _db.Bikes;
 
-            if (model.BikeFilters != null)
+            /*if (model.BikeFilters != null)
             {
                 if (model.BikeFilters.Make != null)
                 {
@@ -36,7 +39,7 @@ namespace LearnerBikes.Controllers
                 }
 
                     
-            }
+            }*/
 
             return View(model);
         }
