@@ -10,6 +10,6 @@ namespace LearnerBikes.Models
         public string Make { get; set; }
         public int MaxPrice { get; set; }
         public string Type { get; set; }
-        public string Year { get; set; }
+        public int Age { get; set; }
     }
 }

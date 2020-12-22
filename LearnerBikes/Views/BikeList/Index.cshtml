@@ -21,8 +21,30 @@
                     </select>
                 </div>
 
+                <div class="filter">
+                    <p class="filter-title">Age</p>
+                    <select class="select-dropdown" asp-for="BikeFilters.Age">
+                        <option selected="selected" value="0">Up To (Any)</option>
+                        <option value="1">Up to 1 year</option>
+                        <option value="2">Up to 2 years</option>
+                        <option value="3">Up to 3 years</option>
+                        <option value="4">Up to 4 years</option>
+                        <option value="5">Up to 5 years</option>
+                        <option value="6">Over 5 years</option>
+                    </select>
+                </div>
 
-                <!--TODO Decide on which filters to include and implement filtering logic handling it in a new class-->
+                <div class="filter">
+                    <p class="filter-title">Bike Type</p>
+                    <select class="select-dropdown" asp-for="BikeFilters.Type">
+                        <option selected="selected" value="Any Type">Type (Any)</option>
+                        <option value="Supersport">Supersport</option>
+                        <option value="Naked">Naked</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Cruiser">Cruiser</option>
+                    </select>
+                </div>
+
                 <div class="filter">
                     <p class="filter-title">Max Price</p>
                     <select class="select-dropdown" asp-for="BikeFilters.MaxPrice">

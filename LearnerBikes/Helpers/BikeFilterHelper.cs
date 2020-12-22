@@ -24,27 +24,39 @@ namespace LearnerBikes.Helpers
                 viewModel.Bikes = viewModel.Bikes.Where(s => s.Make.Contains(viewModel.BikeFilters.Make));
             }
 
+            if (viewModel.BikeFilters.Age.Equals(0))
+            {
+            }
+            else
+            {
+                DateTime moment = DateTime.Now;
+                int currentYear = moment.Year;
+
+                if (viewModel.BikeFilters.Age <= 5)
+                {
+                    viewModel.Bikes = viewModel.Bikes.Where(s => s.MinYear >= (currentYear - viewModel.BikeFilters.Age) || s.MaxYear >= (currentYear - viewModel.BikeFilters.Age));
+                } else
+                {
+                    viewModel.Bikes = viewModel.Bikes.Where(s => s.MinYear < (currentYear - viewModel.BikeFilters.Age) || s.MaxYear < (currentYear - viewModel.BikeFilters.Age));
+                }
+                
+            }
+
+            if (viewModel.BikeFilters.Type.Equals("Any Type"))
+            {
+            }
+            else
+            {
+                viewModel.Bikes = viewModel.Bikes.Where(s => s.BikeType.Contains(viewModel.BikeFilters.Type));
+            }
+
+
             if (viewModel.BikeFilters.MaxPrice.Equals(0))
             {
             } else
             {
                 viewModel.Bikes = viewModel.Bikes.Where(s => s.Price < viewModel.BikeFilters.MaxPrice);
             }
-
-/*            if (model.BikeFilters != null)
-            {
-                if (model.BikeFilters.Make != null)
-                {
-                    if (model.BikeFilters.Make.Equals("Any Make"))
-                    {
-                        model.Bikes = _db.Bikes;
-                        return View(model);
-                    }
-                    model.Bikes = model.Bikes.Where(s => s.Make.Contains(model.BikeFilters.Make));
-                }
-
-
-            }*/
 
             return viewModel;
         }

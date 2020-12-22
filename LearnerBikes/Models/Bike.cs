@@ -15,8 +15,6 @@ namespace LearnerBikes.Models
 
         public string Model { get; set; }
 
-        public string Year { get; set; }
-
         public int Price { get; set; }
 
         public string Power { get; set; }
@@ -26,5 +24,9 @@ namespace LearnerBikes.Models
         public string BikeType { get; set; }
 
         public string ImageUrl { get; set; }
+
+        public int MinYear { get; set; }
+
+        public int MaxYear { get; set; }
     }
 }

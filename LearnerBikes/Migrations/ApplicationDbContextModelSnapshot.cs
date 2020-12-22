@@ -34,6 +34,12 @@ namespace LearnerBikes.Migrations
                     b.Property<string>("Make")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("MaxYear")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MinYear")
+                        .HasColumnType("int");
+
                     b.Property<string>("Model")
                         .HasColumnType("nvarchar(max)");
 
@@ -44,9 +50,6 @@ namespace LearnerBikes.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("WetWeight")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Year")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
