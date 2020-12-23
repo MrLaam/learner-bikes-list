@@ -50,14 +50,6 @@ namespace LearnerBikes.Helpers
                 viewModel.Bikes = viewModel.Bikes.Where(s => s.BikeType.Contains(viewModel.BikeFilters.Type));
             }
 
-
-            if (viewModel.BikeFilters.MaxPrice.Equals(0))
-            {
-            } else
-            {
-                viewModel.Bikes = viewModel.Bikes.Where(s => s.Price < viewModel.BikeFilters.MaxPrice);
-            }
-
             return viewModel;
         }
 

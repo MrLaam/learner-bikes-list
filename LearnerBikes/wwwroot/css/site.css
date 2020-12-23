@@ -38,6 +38,10 @@ body {
     width: 100%;
 }
 
+.navbar-hyperlink {
+    color: inherit;
+}
+
 .hamburger-wrapper {
     display: none;
     border: solid #3A3A3A 0.5px;
