@@ -1,10 +1,11 @@
 ﻿.banner-wrapper {
     height: 45vh;
-    background-image: linear-gradient(#272727, #FFA200);
+    background: #FFA200;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #000;
 }
 
 .banner-contents-wrapper {
@@ -30,12 +31,13 @@ a.browse-button {
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 400;
-    background-color: #ffa500;
+    background-color: #000;
+    color: #fafafa;
     text-align: center;
     transition: all 0.2s;
 }
 a.browse-button:hover {
-    background-color: #cc8400;
+    background-color: #323232;
 }
 
 .browse-button {
@@ -45,6 +47,7 @@ a.browse-button:hover {
 
 .brands-section-wrapper {
     background-color: #D2D2D2;
+    padding: 100px 0 100px 0;
 }
 
 .brands-section {
@@ -55,15 +58,25 @@ a.browse-button:hover {
 .brands-section__text-wrapper {
     display: flex;
     align-items: center;
+    
+    width: 100%;
+    text-align: center;
+}
+
+.brands-section__img {
+    width: 100%;
+}
+
+.brands-section__img-wrapper {
     padding: 80px 160px 80px 160px;
     text-align: center;
 }
 
 .brands-section__text {
+    padding: 80px 160px 80px 160px;
 }
 
-.brands-section__img {
-    width: 30%;
+.bike-logos-img {
+    width: 65%;
     height: auto;
-    padding: 80px 160px 80px 160px;
 }
