@@ -58,7 +58,6 @@ a.browse-button:hover {
 .brands-section__text-wrapper {
     display: flex;
     align-items: center;
-    
     width: 100%;
     text-align: center;
 }
@@ -68,12 +67,17 @@ a.browse-button:hover {
 }
 
 .brands-section__img-wrapper {
-    padding: 80px 160px 80px 160px;
+    padding: 80px 170px 80px 170px;
     text-align: center;
 }
 
 .brands-section__text {
-    padding: 80px 160px 80px 160px;
+    padding: 80px 170px 80px 170px;
+}
+
+.brands-section__text--description {
+    width: 50%;
+    margin: 0 auto;
 }
 
 .bike-logos-img {
