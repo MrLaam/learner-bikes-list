@@ -6,20 +6,21 @@
     align-items: center;
     justify-content: center;
     color: #000;
+    padding: 25px 0 25px;
 }
 
 .banner-contents-wrapper {
 }
 
 #banner-title {
-    font-size: 50px;
+    font-size: calc(min(max(2rem, 4vw), 50px));
     font-weight: 700;
-    margin: 25px 0 25px 0;
+    margin: 25px 0 25px;
 }
 
 #banner-subtitle {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: calc(min(max(1.2rem, 4vw), 30px));
+    font-weight: 500;
     margin: 25px 0 25px 0;
 }
 
@@ -47,7 +48,7 @@ a.browse-button:hover {
 
 .brands-section-wrapper {
     background-color: #D2D2D2;
-    padding: 100px 0 100px 0;
+    padding: 145px 0 145px 0;
 }
 
 .brands-section {
@@ -67,12 +68,10 @@ a.browse-button:hover {
 }
 
 .brands-section__img-wrapper {
-    padding: 80px 170px 80px 170px;
     text-align: center;
 }
 
 .brands-section__text {
-    padding: 80px 170px 80px 170px;
 }
 
 .brands-section__text--description {
@@ -81,6 +80,16 @@ a.browse-button:hover {
 }
 
 .bike-logos-img {
-    width: 65%;
+    width: 45%;
     height: auto;
+}
+
+/*Media Queries*/
+
+@media (max-width: 369px) {
+    #banner-title {
+        font-size: calc(min(max(1.6rem, 4vw), 50px));
+        font-weight: 700;
+        margin: 25px 20px 25px 20px;
+    }
 }
