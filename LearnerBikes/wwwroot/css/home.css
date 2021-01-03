@@ -53,6 +53,8 @@ a.browse-button:hover {
 
 .brands-section {
     display: flex;
+    align-items: center;
+    justify-content: center;
     color: #000;
 }
 
@@ -85,6 +87,54 @@ a.browse-button:hover {
 }
 
 /*Media Queries*/
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .bike-logos-img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1023px) {
+    .bike-logos-img {
+        width: 55%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 999px) {
+    .bike-logos-img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 699px) {
+    .brands-section {
+        display: block;
+    }
+
+    .brands-section-wrapper {
+        padding: 100px 0 100px;
+    }
+
+    .brands-section__img-wrapper {
+        padding-bottom: 80px;
+    }
+}
+
+@media /*(min-width: 520px) and */(max-width: 699px) {
+    .bike-logos-img {
+        width: 75%;
+    }
+
+    .brands-section__text--description {
+        width: 65%;
+    }
+}
+
+@media (min-width: 370px) and (max-wdith: 519px) {
+    /*.bike-logos-img {
+        width: 60%;
+    }*/
+}
 
 @media (max-width: 369px) {
     #banner-title {
