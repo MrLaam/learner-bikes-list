@@ -80,6 +80,34 @@
     padding: 8px 0 8px 0;
 }
 
+#scrollToTopBtn {
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    width: 48px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s ease;
+    outline: none;
+}
+
+.scroll-top-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    left: 50%;
+}
+
+.showBtn {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 /*Media Queries*/
 @media (hover: hover) and (pointer: fine) {
 }
@@ -150,10 +178,6 @@
         padding: 0 0 30px 0;
     }
 
-    .bike-list-wrapper {
-        padding: 16px 0 16px;
-    }
-
     .filter-wrapper {
         font-size: calc(min(max(1rem, 4vw), 16px));
         display: none;
@@ -167,7 +191,7 @@
     }
 
     .bike-list-wrapper {
-        padding: 8px;
+        padding: 8px 8px 48px 8px;
         width: 100%;
         height: 100%;
         font-size: calc(min(max(1rem, 4vw), 16px));

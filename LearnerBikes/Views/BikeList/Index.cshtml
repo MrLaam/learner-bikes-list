@@ -59,20 +59,23 @@
     <div class="bike-list-wrapper">
         @if (Model.Bikes.Count() > 0)
         {
-        <div class="card-wrapper">
-            @foreach (var bike in Model.Bikes)
-            {
-            <div class="bike-card">
-                <img class="bike-image" src="@bike.ImageUrl" />
-                <h3>@bike.Make @bike.Model</h3>
+            <div class="card-wrapper">
+                @foreach (var bike in Model.Bikes)
+                {
+                    <div class="bike-card">
+                        <img class="bike-image" src="@bike.ImageUrl" />
+                        <h3>@bike.Make @bike.Model</h3>
+                    </div>
+                }
             </div>
-            }
-        </div>
-            }
-            else
-            {
+            <div class="scroll-top-wrapper">
+                <button id="scrollToTopBtn">☝️</button>
+            </div>
+        }
+        else
+        {
             <p>Could not find any bikes.</p>
-            }
+        }
     </div>
 </div>
 
