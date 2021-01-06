@@ -26,7 +26,7 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
 
 function handleScroll() {
     var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
-    if ((rootElement.scrollTop / scrollTotal) > 0.80) {
+    if ((rootElement.scrollTop / scrollTotal) > 0.75) {
         scrollToTopBtn.classList.add("showBtn")
     } else {
         scrollToTopBtn.classList.remove("showBtn")
