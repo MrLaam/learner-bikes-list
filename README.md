@@ -17,7 +17,7 @@ Designed with consideration of UX/UI theory.
 
 ![MobileBrowse](https://user-images.githubusercontent.com/57018671/103926388-c3215400-5110-11eb-8289-daf1bd2ea0b0.PNG)
 
-Responsive design and fluid typography.
+Responsive design with fluid typography.
 	
 ## Technologies
 * ASP.NET Core (5.0)
