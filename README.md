@@ -10,17 +10,18 @@ The motorcycle images are identical for testing purposes. When it is deployed to
 * [Technologies](#technologies)
 
 ## General info
-This project was chosen as a way to demonstrate frontend and backend skills (web dev. and ASP.NET). The site is fully responsive on all devices, with consideration of horizontal and vertical landscapes. Best coding pracices have been adopted from clear variable naming to MVC structuring. The design was produced via a high fidelity mockup in AdobeXD.
+This project was chosen as a way to demonstrate frontend and backend skills (web dev. and ASP.NET). The site is fully responsive on all devices, with consideration of horizontal and vertical landscapes. Best coding pracices have been adopted from clear variable naming to MVC structuring. The design was created via a high fidelity mockup in AdobeXD.
 
 ![adobemockup](https://user-images.githubusercontent.com/57018671/103926372-bdc40980-5110-11eb-9bef-e9628acab40d.PNG)
-Application of UX theory and UI design to ensure usability and ubiquity.
+Designed with consideration of UX/UI theory.
 
 ![MobileBrowse](https://user-images.githubusercontent.com/57018671/103926388-c3215400-5110-11eb-8289-daf1bd2ea0b0.PNG)
 
-Responsive design and fluid typography to ensure full access and correct scaling.
+Responsive design and fluid typography.
 	
 ## Technologies
 * ASP.NET Core (5.0)
 * C#, Razor markup & tag helpers, HTML, CSS, JavaScript, LINQ
 * MSSQL Management Studio
 * AWS/Heroku (to be decided)
+* Photoshop
