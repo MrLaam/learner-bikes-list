@@ -21,14 +21,14 @@
             </div>
 
             <div class="navbar-wrapper" id="navbarToggle">
-                
+
                 <ul class="navbar">
                     <li><a class="navbar-hyperlink" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li id="center-nav-styling"><a class="" asp-area="" asp-controller="BikeList" asp-action="Index">Browse</a></li>
                     <li><a class="navbar-hyperlink" asp-area="" asp-controller="ContactUs" asp-action="Index">Contact Us</a></li>
                 </ul>
             </div>
-        </div>        
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -41,6 +41,7 @@
     </footer>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="jquery-3.5.1.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

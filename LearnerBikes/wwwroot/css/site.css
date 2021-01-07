@@ -101,7 +101,7 @@ body {
 }
 
 #footer-copyright {
-    font-size: calc(min(max(1rem, 4vw), 16px));
+    font-size: 12px;
     padding: 20px;
 }
 
@@ -176,12 +176,12 @@ body {
     .navbar li a {
         display: block;
         padding: 19px 0 19px;
-        background: #D3D3D3;
-        color: #000;
+        background: #565656;
+        color: #fafafa;
     }
 
     .navbar li a:visited {
-        color: #000;
+        color: #fafafa;
     }
 
     #center-nav-styling {
@@ -197,5 +197,11 @@ body {
 
     .logo-wrapper, .hamburger-wrapper {
         min-width: unset;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .main-footer {
+        height: 150px;
     }
 }

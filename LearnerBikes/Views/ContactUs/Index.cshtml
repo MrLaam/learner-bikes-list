@@ -1,1 +1,21 @@
-﻿<h1>You are on the "Contact Us" page!</h1>
+﻿@model LearnerBikes.Models.Contact
+
+<link rel="stylesheet" href="~/css/contact.css" />
+
+<div class="contact-wrapper">
+    <h1>You are on the "Contact Us" page!</h1>
+
+    <form id="contactForm" asp-action="Index" asp-controller="ContactUs">
+        <p>Email</p>
+        <input type="email" asp-for="senderEmail" />
+        <br /> <br />
+        <p>Subject</p>
+        <input type="text" asp-for="senderSubject" />
+        <br /> <br />
+        <p>Message</p>
+        <input type="text" asp-for="senderMessage" />
+        <br /> <br />
+        <input type="submit" value="Submit" onclick="sendEmail()" />
+    </form>
+</div>
+

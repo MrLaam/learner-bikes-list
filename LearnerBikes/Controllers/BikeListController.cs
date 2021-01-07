@@ -24,23 +24,6 @@ namespace LearnerBikes.Controllers
             BikeFilterHelper helper = new BikeFilterHelper();
             model = helper.applyFilters(model);
 
-            //IEnumerable<Bike> objList = _db.Bikes;
-
-            /*if (model.BikeFilters != null)
-            {
-                if (model.BikeFilters.Make != null)
-                {
-                    if(model.BikeFilters.Make.Equals("Any Make"))
-                    {
-                        model.Bikes = _db.Bikes;
-                        return View(model);
-                    }
-                    model.Bikes = model.Bikes.Where(s => s.Make.Contains(model.BikeFilters.Make));
-                }
-
-                    
-            }*/
-
             return View(model);
         }
     }
