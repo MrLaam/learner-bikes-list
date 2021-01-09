@@ -1,4 +1,50 @@
-﻿.contact-wrapper {
+﻿body {
+    background: #D2D2D2;
+}
+
+.contact-wrapper {
     background: #D2D2D2;
     color: #000;
+    min-height: 95vh;
+}
+
+.submit-button {
+    margin: 25px 0 25px 0;
+    display: inline-block;
+    padding: 0.8em 3.5em;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    background-color: #000;
+    color: #fafafa;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #323232;
+}
+
+.form-box-wrapper {
+    width: 25%;
+    background: #fafafa;
+    margin: 0 auto;
+    background: #d2d2d2;
+}
+
+.form-wrapper {
+    padding: 20px;
+    font-weight: 500;
+    margin-top: 5vh;
+    box-shadow: 1px 1px 4px #808080;
+    border-radius: 10px;
+    background: #fafafa;
+}
+
+.msg-textarea {
+    height: 12vh;
+    width: 99.5%;
+    max-width: 99.5%;
 }
