@@ -26,7 +26,7 @@
     text-align: center;
     transition: all 0.2s;
     cursor: pointer;
-    width: 40%;
+    width: 220px;
 }
 
 .submit-button:hover {
@@ -39,7 +39,7 @@
 }
 
 .form-box-wrapper {
-    width: 25%;
+    width: 600px;
     background: #fafafa;
     margin: 0 auto;
     background: #d2d2d2;
@@ -52,7 +52,6 @@
     box-shadow: 1px 1px 4px #808080;
     border-radius: 5px;
     background: #fafafa;
-    width: 100%;
 }
 
 .form-wrapper h4 {
@@ -72,7 +71,7 @@
 }
 
 .msg-textarea {
-    height: 12vh;
+    height: 16vh;
     width: 99.5%;
     max-width: 99.5%;
 }
@@ -88,3 +87,18 @@
     color: #ff0033;
     float: right;
 }
+
+/*Media Queries*/
+@media (max-width: 640px) {
+    .form-box-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 425px) {
+    .submit-button {
+        width: 100%;
+        padding: 1em 3.5em;
+    }
+}
+/**/
