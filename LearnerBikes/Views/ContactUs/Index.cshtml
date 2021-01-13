@@ -7,16 +7,18 @@
         <div class="form-wrapper">
             <h2>How can we help?</h2>
             <form id="contactForm" asp-action="Index" asp-controller="ContactUs">
-                <p>Email</p>
+                <h4>Email</h4>
                 <input type="email" asp-for="senderEmail" />
                 <br /> <br />
-                <p>Subject</p>
+                <h4>Subject</h4>
                 <input type="text" asp-for="senderSubject" />
                 <br /> <br />
-                <p>Message</p>
+                <h4>Message</h4>
                 <textarea class="msg-textarea" asp-for="senderMessage"></textarea>
                 <br /> <br />
-                <input class="submit-button" type="submit" value="Send message" onclick="sendEmail()" />
+                <div class="submit-button-wrapper">
+                    <input class="submit-button" type="submit" value="Send message" onclick="sendEmail()" />
+                </div>               
             </form>
         </div>
         

@@ -8,11 +8,16 @@
     min-height: 95vh;
 }
 
+.submit-button-wrapper {
+    text-align: center;
+}
+
 .submit-button {
     margin: 25px 0 25px 0;
     display: inline-block;
     padding: 0.8em 3.5em;
-    border-radius: 2em;
+    border-radius: 1em;
+    border-color: #000;
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 400;
@@ -21,10 +26,12 @@
     text-align: center;
     transition: all 0.2s;
     cursor: pointer;
+    width: 40%;
 }
 
 .submit-button:hover {
     background-color: #323232;
+    border-color: #323232;
 }
 
 .form-box-wrapper {
@@ -39,8 +46,24 @@
     font-weight: 500;
     margin-top: 5vh;
     box-shadow: 1px 1px 4px #808080;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #fafafa;
+    width: 100%;
+}
+
+.form-wrapper h4 {
+    margin: 10px 0 10px;
+}
+
+.form-wrapper input[type=text], .form-wrapper input[type=email], .form-wrapper textarea {
+    border: 1px solid #A9A9A9;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.form-wrapper input:focus, .form-wrapper textarea:focus {
+    outline: 1px solid #000;
 }
 
 .msg-textarea {
