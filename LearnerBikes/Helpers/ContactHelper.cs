@@ -13,7 +13,7 @@ namespace LearnerBikes.Helpers
     {
         public void sendEmail(Contact contact)
         {
-            if(contact.senderEmail != null && contact.senderSubject != null && contact.senderMessage != null)
+            if(contact.senderEmail != null && contact.senderName != null && contact.senderMessage != null)
             {
                 var builder = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json");
@@ -26,7 +26,10 @@ namespace LearnerBikes.Helpers
                 EnableSsl = true,
             };
 
-            smtpClient.Send(contact.senderEmail, "jordanlambikes@gmail.com", contact.senderSubject, contact.senderMessage);
+                var name = "Sender: " + contact.senderName;
+                var message = "From " + contact.senderEmail + ". Message: " + contact.senderMessage;
+
+            smtpClient.Send(contact.senderEmail, "jordanlambikes@gmail.com", name, message);
             }
             
         }

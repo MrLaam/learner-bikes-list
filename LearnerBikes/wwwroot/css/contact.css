@@ -34,6 +34,10 @@
     border-color: #323232;
 }
 
+.submit-button:hover, .submit-button:focus {
+    outline: 0 none !important;
+}
+
 .form-box-wrapper {
     width: 25%;
     background: #fafafa;
@@ -53,6 +57,7 @@
 
 .form-wrapper h4 {
     margin: 10px 0 10px;
+    float: left;
 }
 
 .form-wrapper input[type=text], .form-wrapper input[type=email], .form-wrapper textarea {
@@ -70,4 +75,16 @@
     height: 12vh;
     width: 99.5%;
     max-width: 99.5%;
+}
+
+.title-validation-wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.title-validation-wrapper span {
+    margin: 10px 15px 10px;
+    display: inline-block;
+    color: #ff0033;
+    float: right;
 }

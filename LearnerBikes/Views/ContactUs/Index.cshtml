@@ -7,22 +7,36 @@
         <div class="form-wrapper">
             <h2>How can we help?</h2>
             <form id="contactForm" asp-action="Index" asp-controller="ContactUs">
-                <h4>Email</h4>
-                <input type="email" asp-for="senderEmail" />
+                <div class="title-validation-wrapper">
+                    <h4>Name</h4>
+                    <span asp-validation-for="senderName"></span>
+                </div>
+                <input type="text" asp-for="senderName" placeholder="Your name" />
                 <br /> <br />
-                <h4>Subject</h4>
-                <input type="text" asp-for="senderSubject" />
+                    <div class="title-validation-wrapper">
+                        <h4>Email</h4>
+                        <span asp-validation-for="senderEmail"></span>
+                    </div>
+                
+                <input type="email" asp-for="senderEmail" placeholder="Your email address" />
                 <br /> <br />
-                <h4>Message</h4>
-                <textarea class="msg-textarea" asp-for="senderMessage"></textarea>
+                    <div class="title-validation-wrapper">
+                        <h4>Message</h4>
+                        <span asp-validation-for="senderMessage"></span>
+                     </div>               
+                <textarea class="msg-textarea" asp-for="senderMessage" placeholder="Enter your message..."></textarea>
                 <br /> <br />
                 <div class="submit-button-wrapper">
                     <input class="submit-button" type="submit" value="Send message" onclick="sendEmail()" />
-                </div>               
+                </div>
             </form>
         </div>
-        
+
     </div>
-    
+
 </div>
 
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+@*    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
+}
