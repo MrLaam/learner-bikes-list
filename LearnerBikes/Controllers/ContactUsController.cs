@@ -10,10 +10,21 @@ namespace LearnerBikes.Controllers
 {
     public class ContactUsController : Controller
     {
-        public IActionResult Index(Contact contact)
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index (Contact contact)
         {
             ContactHelper helper = new ContactHelper();
             helper.sendEmail(contact);
+            return RedirectToAction("FormSubmitted", "ContactUs");
+        }
+
+        public IActionResult FormSubmitted()
+        {
             return View();
         }
 

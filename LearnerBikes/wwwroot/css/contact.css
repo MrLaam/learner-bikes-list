@@ -48,7 +48,7 @@
 .form-wrapper {
     padding: 20px;
     font-weight: 500;
-    margin-top: 5vh;
+    margin: 5vh 0 5vh;
     box-shadow: 1px 1px 4px #808080;
     border-radius: 5px;
     background: #fafafa;
@@ -86,6 +86,28 @@
     display: inline-block;
     color: #ff0033;
     float: right;
+}
+
+.title-tick-wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.tick-image {
+    float: left;
+    padding-right: 10px;
+}
+
+.form-wrapper p {
+    text-align: center;
+}
+
+.back-to-home-wrapper {
+    text-align: center;
+}
+
+.back-to-home-wrapper a {
+    padding: 0.65em 3.5em !important; 
 }
 
 /*Media Queries*/

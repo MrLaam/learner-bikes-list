@@ -6,7 +6,7 @@
     <div class="form-box-wrapper">
         <div class="form-wrapper">
             <h2>Contact Us</h2>
-            <form id="contactForm" asp-action="Index" asp-controller="ContactUs">
+            <form id="contactForm" method="post" asp-action="Index" asp-controller="ContactUs">
                 <div class="title-validation-wrapper">
                     <h4>Name</h4>
                     <span asp-validation-for="senderName"></span>
@@ -38,5 +38,4 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-@*    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}*@
 }

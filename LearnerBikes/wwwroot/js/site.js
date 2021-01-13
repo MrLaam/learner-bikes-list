@@ -38,11 +38,11 @@ function handleScroll() {
     }
 }
 
-document.addEventListener("scroll", handleScroll)
+document.addEventListener("scroll", handleScroll);
 /**/
 
 /*Submit Contact Form*/
-function SendEmail() {
-    document.getElementById("contactForm").submit();
+function sendEmail() {
+    
 }
 /**/
