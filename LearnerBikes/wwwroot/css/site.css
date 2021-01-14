@@ -38,6 +38,10 @@ body {
     width: 100%;
 }
 
+.navbar-wrapper, .logo-wrapper, .hamburger-wrapper {
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+}
+
 .navbar-hyperlink {
     color: inherit;
 }

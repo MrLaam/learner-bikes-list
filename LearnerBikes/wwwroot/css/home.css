@@ -1,5 +1,5 @@
 ﻿.banner-wrapper {
-    height: 45vh;
+    height: 50vh;
     background: #FFA200;
     text-align: center;
     display: flex;
@@ -10,22 +10,31 @@
 }
 
 .banner-contents-wrapper {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+
+.banner-contents {
+    padding: 20px;
 }
 
 #banner-title {
-    font-size: calc(min(max(2rem, 4vw), 50px));
+    font-size: calc(min(max(2rem, 4vw), 45px));
     font-weight: 700;
     margin: 25px 0 25px;
 }
 
 #banner-subtitle {
-    font-size: calc(min(max(1.2rem, 4vw), 30px));
+    font-size: calc(min(max(1.2rem, 4vw), 22px));
     font-weight: 500;
-    margin: 25px 0 25px 0;
+    width: 53%;
+    margin: 0 auto;
 }
 
 a.browse-button {
-    margin: 25px 0 25px 0;
+    margin: 50px 0 25px 0;
     display: inline-block;
     padding: 0.5em 1.5em;
     border-radius: 2em;
@@ -44,6 +53,18 @@ a.browse-button:hover {
 .browse-button {
     color: #000;
     background-color: #FFA200;
+}
+
+.banner-img-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.banner-img {
+    width: 762px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .brands-section-wrapper {
@@ -66,7 +87,8 @@ a.browse-button:hover {
 }
 
 .brands-section__img {
-    width: 100%;
+    width: 85%;
+    user-select: none;
 }
 
 .brands-section__img-wrapper {
@@ -87,6 +109,81 @@ a.browse-button:hover {
 }
 
 /*Media Queries*/
+
+@media (min-width: 1771px) and (max-width: 1920px) {
+    .banner-img {
+        width: 712px;
+    }
+
+    #banner-subtitle {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1655px) and (max-width: 1770px) {
+    .banner-img {
+        width: 630px;
+    }
+
+    .banner-contents-wrapper {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1336px) and (max-width: 1654px) {
+    .banner-img {
+        width: 590px;
+    }
+
+    .banner-contents-wrapper {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1335px) {
+    #banner-title {
+        font-size: calc(min(max(2rem, 4vw), 40px));
+    }
+
+    #banner-subtitle {
+        font-size: calc(min(max(1.2rem, 4vw), 19px));
+        width: 58%;
+    }
+
+    .banner-contents-wrapper {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1181px) and (max-width: 1335px) {
+    .banner-img {
+        width: 520px;
+    }
+}
+
+@media (min-width: 983px) and (max-width: 1180px) {
+    .banner-img {
+        width: 470px;
+    }
+}
+
+@media (max-width: 982px) {
+    #banner-title {
+        font-size: calc(min(max(2rem, 4vw), 36px));
+    }
+
+    #banner-subtitle {
+        font-size: calc(min(max(1.2rem, 4vw), 16px));
+    }
+}
+
+@media (min-width: 0px) and (max-width: 982px) {
+    .banner-img {
+        width: 420px;
+    }
+}
+
+/**/
 
 @media (min-width: 1024px) and (max-width: 1200px) {
     .bike-logos-img {
