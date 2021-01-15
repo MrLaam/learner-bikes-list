@@ -6,40 +6,56 @@
 
 <div class="home-wrapper">
 
-    <div class="banner-wrapper">
-        <div class="banner-contents-wrapper">
-            <div class="banner-contents">
-                <h1 id="banner-title">The Learner Motorcycles Database</h1>
-                <p id="banner-subtitle">Browse through a comprehensive list of 125cc motorcycles and compare their specs.</p>
-                <a asp-controller="BikeList" asp-action="Index" class="browse-button">Browse All Bikes</a>
-            </div>
-            <div class="banner-img-wrapper">
-                <img src="~/images/landing-page-image.png" class="banner-img" />
+    <div class="banner-wrapper-outer">
+        <div class="banner-wrapper">
+            <div class="banner-contents-wrapper">
+                <div class="banner-contents">
+                    <h1 class="banner-title">The Learner Motorcycles Database</h1>
+                    <p class="banner-subtitle">Browse through a comprehensive list of 125cc motorcycles and compare their specs.</p>
+                    <a asp-controller="BikeList" asp-action="Index" class="browse-button">Browse All Bikes</a>
+                </div>
+                <div class="banner-img-wrapper">
+                    <img src="~/images/landing-page-image.png" class="banner-img" />
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="brands-section-wrapper">
-        <div class="brands-section">
-            <div class="brands-section__img">
-                <div class="brands-section__img-wrapper">
+    <div class="brands-section-wrapper-outer">
+        <div class="banner-wrapper">
+            <div class="banner-contents-wrapper">
+                <div class="banner-img-wrapper">
                     <img src="/images/bike-logos.png" class="bike-logos-img" />
                 </div>
+                <div class="banner-contents">
+                    <h1 class="makes-title">Explore A Complete List Of All 125cc Bikes</h1>
+                    <p class="makes-subtitle">Inclusive of all brands, you'll be sure to consider all possible bikes to help make a better informed purchasing decision.</p>
+                </div>
             </div>
-            <div class="brands-section__text-wrapper">
-                <div class="brands-section__text">
-                    <h2>Explore A Complete List Of All 125cc Bikes</h2>
-                    <div class="brands-section__text--description">
-                        <p>Inclusive of all brands, you'll be sure to consider all possible bikes to help make a better informed purchasing decision.</p>
+        </div>
+    </div>
+
+@*Keep
+    bike-logos-img*@
+
+@*    <div class="brands-section-wrapper-outer">
+        <div class="brands-section-wrapper">
+            <div class="brands-section">
+                <div class="brands-section__img">
+                    <div class="brands-section__img-wrapper">
+                        <img src="/images/bike-logos.png" class="bike-logos-img" />
+                    </div>
+                </div>
+                <div class="brands-section__text-wrapper">
+                    <div class="brands-section__text">
+                        <h2>Explore A Complete List Of All 125cc Bikes</h2>
+                        <div class="brands-section__text--description">
+                            <p>Inclusive of all brands, you'll be sure to consider all possible bikes to help make a better informed purchasing decision.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    </div>
-
-    <div class="rename-this">
-
-    </div>
+    </div>*@
 
 </div>

@@ -16,7 +16,7 @@
     margin: 25px 0 25px 0;
     display: inline-block;
     padding: 0.8em 3.5em;
-    border-radius: 1em;
+    border-radius: 0.25em;
     border-color: #000;
     box-sizing: border-box;
     text-decoration: none;
@@ -52,7 +52,7 @@
 .form-wrapper {
     padding: 20px;
     font-weight: 500;
-    margin: 5vh 0 5vh;
+    margin: 2.5vh 0 5vh;
     box-shadow: 1px 1px 4px #808080;
     border-radius: 5px;
     background: #fafafa;

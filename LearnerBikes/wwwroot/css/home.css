@@ -1,43 +1,52 @@
-﻿.banner-wrapper {
-    height: 50vh;
+﻿.banner-wrapper, .brands-section-wrapper {
+    width: 1208px;
+    margin: 0 auto;
+}
+
+.banner-wrapper-outer {
     background: #FFA200;
-    text-align: center;
+}
+
+.brands-section-wrapper-outer {
+    background-color: #e0e0e0;
+}
+
+.banner-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #000;
-    padding: 25px 0 25px;
+    padding: 138px 0 138px;
 }
 
 .banner-contents-wrapper {
     user-select: none;
     display: flex;
     align-items: center;
-    width: 75%;
+    flex-wrap: wrap;
 }
 
 .banner-contents {
-    padding: 20px;
+    width: 50%;
 }
 
-#banner-title {
-    font-size: calc(min(max(2rem, 4vw), 45px));
-    font-weight: 700;
-    margin: 25px 0 25px;
+.banner-title {
+    font-size: calc(min(max(2rem, 4vw), 64px));
+    font-weight: 600;
+    margin: 0 20px 30px 0;
 }
 
-#banner-subtitle {
-    font-size: calc(min(max(1.2rem, 4vw), 22px));
+.banner-subtitle {
+    font-size: calc(min(max(1.2rem, 4vw), 24px));
     font-weight: 500;
-    width: 53%;
-    margin: 0 auto;
+    margin:  0 20px 30px 0;
 }
 
 a.browse-button {
-    margin: 50px 0 25px 0;
+    margin-top: 10px;
     display: inline-block;
     padding: 0.5em 1.5em;
-    border-radius: 2em;
+    border-radius: 0.25em;
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 400;
@@ -56,20 +65,17 @@ a.browse-button:hover {
 }
 
 .banner-img-wrapper {
-    display: flex;
-    align-items: center;
-    padding: 20px;
+    width: 50%;
 }
 
 .banner-img {
-    width: 762px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
 }
 
 .brands-section-wrapper {
-    background-color: #D2D2D2;
-    padding: 145px 0 145px 0;
+    padding: 100px 0 100px;
 }
 
 .brands-section {
@@ -104,153 +110,116 @@ a.browse-button:hover {
 }
 
 .bike-logos-img {
-    width: 45%;
+    width: 95%;
     height: auto;
+}
+
+.makes-title {
+    font-size: calc(min(max(2rem, 4vw), 43px));
+    font-weight: 600;
+    margin: 0 0 30px 35px;
+}
+
+.makes-subtitle {
+    font-size: calc(min(max(1.2rem, 4vw), 24px));
+    font-weight: 500;
+    margin: 0 0 30px 35px;
 }
 
 /*Media Queries*/
 
-@media (min-width: 1771px) and (max-width: 1920px) {
-    .banner-img {
-        width: 712px;
-    }
-
-    #banner-subtitle {
-        width: 70%;
+@media (min-width: 1199px) and (max-width: 1920px) {
+    .banner-wrapper, .brands-section-wrapper {
+        width: 1080px;
     }
 }
 
-@media (min-width: 1655px) and (max-width: 1770px) {
-    .banner-img {
-        width: 630px;
+@media (max-width: 1920px) {
+    .banner-wrapper {
+        padding: 115px 0 115px;
     }
+}
 
+@media (min-width: 1000px) and (max-width: 1198px) {
+    .banner-wrapper, .brands-section-wrapper {
+        width: 950px;
+    }
+}
+
+@media (min-width: 847px) and (max-width: 999px) {
+    .banner-wrapper, .brands-section-wrapper {
+        width: 800px;
+    }
+}
+
+@media (min-width: 840px) and (max-width: 846px) {
+    .banner-wrapper, .brands-section-wrapper {
+        width: 800px;
+    }
+}
+
+@media (max-width: 839px) {
     .banner-contents-wrapper {
-        width: 80%;
-    }
-}
-
-@media (min-width: 1336px) and (max-width: 1654px) {
-    .banner-img {
-        width: 590px;
-    }
-
-    .banner-contents-wrapper {
-        width: 85%;
-    }
-}
-
-@media (max-width: 1335px) {
-    #banner-title {
-        font-size: calc(min(max(2rem, 4vw), 40px));
-    }
-
-    #banner-subtitle {
-        font-size: calc(min(max(1.2rem, 4vw), 19px));
-        width: 58%;
-    }
-
-    .banner-contents-wrapper {
-        width: 90%;
-    }
-}
-
-@media (min-width: 1181px) and (max-width: 1335px) {
-    .banner-img {
-        width: 520px;
-    }
-}
-
-@media (min-width: 983px) and (max-width: 1180px) {
-    .banner-img {
-        width: 470px;
-    }
-}
-
-@media (max-width: 982px) {
-    #banner-title {
-        font-size: calc(min(max(2rem, 4vw), 36px));
-    }
-
-    #banner-subtitle {
-        font-size: calc(min(max(1.2rem, 4vw), 16px));
-    }
-}
-
-@media (min-width: 0px) and (max-width: 982px) {
-    .banner-img {
-        width: 420px;
-    }
-}
-
-/**/
-
-@media (min-width: 1024px) and (max-width: 1200px) {
-    .bike-logos-img {
-        width: 50%;
-    }
-}
-
-@media (min-width: 1000px) and (max-width: 1023px) {
-    .bike-logos-img {
-        width: 55%;
-    }
-}
-
-@media (min-width: 700px) and (max-width: 999px) {
-    .bike-logos-img {
-        width: 60%;
-    }
-}
-
-@media (max-width: 699px) {
-    .brands-section {
         display: block;
     }
 
-    .brands-section-wrapper {
-        padding: 100px 0 100px;
+    .banner-title, .banner-subtitle, .makes-title, .makes-subtitle {
+        margin: 0 0 30px;
     }
 
-    .brands-section__img-wrapper {
-        padding-bottom: 80px;
+    .banner-contents, .banner-img-wrapper {
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 75px;
     }
-}
 
-@media /*(min-width: 520px) and */(max-width: 699px) {
-    .bike-logos-img {
+    .banner-contents {
         width: 75%;
     }
 
-    .brands-section__text--description {
+    .bike-logos-img {
+        width: 85%;
+    }
+
+    .banner-img-wrapper {
         width: 65%;
-    }
-}
-
-@media (min-width: 370px) and (max-wdith: 519px) {
-    /*.bike-logos-img {
-        width: 60%;
-    }*/
-}
-
-@media (max-width: 369px) {
-    #banner-title {
-        font-size: calc(min(max(1.6rem, 4vw), 50px));
-        font-weight: 700;
-        margin: 25px 20px 25px 20px;
-    }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-    .brands-section__text {
-        padding: 0 10px 0 10px;
     }
 
     .banner-wrapper {
-        height: 75vh;
+        padding: 75px 0 50px;
     }
 
-    .brands-section-wrapper {
-        padding: 80px 0 80px;
+    .banner-wrapper, .brands-section-wrapper {
+        width: 100%;
+    }
+
+    @media (max-width: 540px) {
+        .banner-contents {
+            width: 95%;
+            padding-bottom: 65px;
+        }
+
+        .banner-img-wrapper {
+            width: 85%;
+            padding-bottom: 65px;
+        }
+
+        .bike-logos-img {
+            width: 95%;
+        }
+    }
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+        .brands-section__text {
+            padding: 0 10px 0 10px;
+        }
+
+        .banner-img-wrapper {
+            display: none;
+        }
+
+        .brands-section-wrapper {
+            padding: 80px 0 80px;
+        }
     }
 }
