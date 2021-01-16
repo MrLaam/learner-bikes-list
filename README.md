@@ -23,5 +23,5 @@ Responsive design with fluid typography.
 * ASP.NET Core (5.0)
 * C#, Razor markup & tag helpers, HTML, CSS, JavaScript, LINQ
 * MSSQL Management Studio
-* AWS/Heroku (to be decided)
+* Azure, AWS S3 (Image hosting)
 * Photoshop
