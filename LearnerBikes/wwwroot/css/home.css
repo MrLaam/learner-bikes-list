@@ -20,7 +20,6 @@
 }
 
 .banner-contents-wrapper {
-    user-select: none;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -53,6 +52,7 @@ a.browse-button {
     background-color: #000;
     color: #fafafa;
     text-align: center;
+    user-select: none;
     transition: all 0.2s;
 }
 a.browse-button:hover {
@@ -72,23 +72,25 @@ a.browse-button:hover {
     width: 100%;
     height: auto;
     margin: 0 auto;
+    user-select: none;
 }
 
 .bike-logos-img {
     width: 95%;
     height: auto;
+    user-select: none;
 }
 
 .makes-title {
     font-size: calc(min(max(2rem, 4vw), 43px));
     font-weight: 600;
-    margin: 0 0 30px 35px;
+    margin: 0 0 30px 65px;
 }
 
 .makes-subtitle {
     font-size: calc(min(max(1.2rem, 4vw), 24px));
     font-weight: 500;
-    margin: 0 0 30px 35px;
+    margin: 0 0 30px 65px;
 }
 
 /*Media Queries*/
@@ -159,6 +161,10 @@ a.browse-button:hover {
     }
 
     @media (max-width: 540px) {
+        .banner-subtitle, .makes-subtitle {
+            margin: 0 25px 30px;
+        }
+
         .banner-contents {
             width: 95%;
             padding-bottom: 65px;
@@ -171,6 +177,10 @@ a.browse-button:hover {
 
         .bike-logos-img {
             width: 95%;
+        }
+
+        .makes-title {
+            margin-top: 25px;
         }
     }
 

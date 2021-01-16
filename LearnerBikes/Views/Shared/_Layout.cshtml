@@ -11,27 +11,28 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="header-wrapper">
-            <div class="logo-wrapper">
-                <a asp-controller="Home" asp-action="Index" class="header-logo"> LearnerBikesDB</a>
-            </div>
-
-            <div class="hamburger-wrapper">
-                <img class="hamburger-menu" onclick="toggleDisplay('navbarToggle')" src="~/images/hamburger.png" />
-            </div>
-
-            <div class="navbar-wrapper" id="navbarToggle">
-
-                <ul class="navbar">
-                    <li><a class="navbar-hyperlink" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li id="center-nav-styling"><a class="" asp-area="" asp-controller="BikeList" asp-action="Index">Browse</a></li>
-                    <li><a class="navbar-hyperlink" asp-area="" asp-controller="ContactUs" asp-action="Index">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
+            <nav class="nav-wrapper">
+                <div class="logo-wrapper">
+                    <a asp-controller="Home" asp-action="Index" class="header-logo"> LearnerBikesDB</a>
+                </div>
+
+                <div class="hamburger-wrapper">
+                    <img class="hamburger-menu" onclick="toggleDisplay('navbarToggle')" src="~/images/hamburger.png" />
+                </div>
+
+                <div class="navbar-wrapper" id="navbarToggle">
+
+                    <ul class="navbar">
+                        <li><a class="navbar-hyperlink" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li id="center-nav-styling"><a class="" asp-area="" asp-controller="BikeList" asp-action="Index">Browse</a></li>
+                        <li><a class="navbar-hyperlink" asp-area="" asp-controller="ContactUs" asp-action="Index">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
             @RenderBody()
         </main>
     </div>
