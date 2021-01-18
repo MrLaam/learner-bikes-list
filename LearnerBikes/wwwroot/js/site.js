@@ -6,11 +6,21 @@ function toggleNavbar(id) {
         filterSection.style.display = "none";
         navbarBlankSpace.style.display = "none";
         document.getElementsByTagName("body")[0].style = "overflow: auto"
+        hamburgerAnimation();
     } else {
         filterSection.style.display = "block";
         navbarBlankSpace.style.display = "block";
         document.getElementsByTagName("body")[0].style = "overflow: hidden";
+        hamburgerAnimation();
     }
+}
+/**/
+
+/*Hamburger animation*/
+var hamburger = document.getElementById("hamburger-icon");
+
+function hamburgerAnimation() {
+    hamburger.classList.toggle('open');
 }
 /**/
 
