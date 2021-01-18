@@ -4,7 +4,10 @@
 }
 
 .banner-wrapper-outer {
-    background: #FFA200;
+    box-shadow: 0 5px 16px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
+    background-image: linear-gradient(to right top, #ffa200, #ff9738, #ff8f55, #ff8a6e, #ff8983);
 }
 
 .brands-section-wrapper-outer {
@@ -73,6 +76,10 @@ a.browse-button:hover {
     height: auto;
     margin: 0 auto;
     user-select: none;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
 }
 
 .bike-logos-img {

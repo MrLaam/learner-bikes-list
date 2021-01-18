@@ -19,8 +19,10 @@ function toggleFilter(id) {
     var filter = document.getElementById(id);
     if (filter.style.display === "block") {
         filter.style.display = "none";
+        document.getElementsByClassName("filter-section-wrapper")[0].style = "padding: 5px";
     } else {
         filter.style.display = "block";
+        document.getElementsByClassName("filter-section-wrapper")[0].style = "padding: 5px 5px 30px 5px";
     }
 }
 /**/
