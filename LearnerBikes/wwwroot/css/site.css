@@ -10,6 +10,7 @@ html {
 
 body {
     margin: 0;
+    height: 100%;
 }
 
 .nav-wrapper {
@@ -17,8 +18,10 @@ body {
     display: flex;
     align-items: stretch;
     width: 100%;
-    position: fixed;
-    top: 0;
+}
+
+.navbar-blank-space {
+    display: none;
 }
 
 .header-logo {
@@ -55,7 +58,7 @@ body {
 
 .hamburger-menu {
     display: none;
-    height: 25.5px;
+    height: 25px;
     width: 32px;
     padding: 16px;
 }
@@ -130,7 +133,7 @@ body {
 
 @media (min-width: 601px) {
     .navbar-wrapper {
-        display: block !important;
+        display: block;
     }
 
     .navbar li a:hover {
@@ -144,6 +147,18 @@ body {
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
+        position: fixed;
+        top: 0;
+    }
+
+    .navbar-blank-space {
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background: linear-gradient(rgba(0,0,0,.3) 51%,rgba(0,0,0,.3));
     }
 
     .hamburger-wrapper, .logo-wrapper {
@@ -161,20 +176,16 @@ body {
         float: right;
     }
 
-/*TODO: Sort out mobile navbar borders and semi opaque background non clickable functionality*/
-
     .navbar-wrapper {
         display: none;
         flex: 100%;
         order: 3;
         padding: 0;
         position: fixed;
-        top: 58px;
+        top: 57px;
         right: 0;
-        bottom: 0;
         left: 0;
         border: 0;
-        background: linear-gradient(rgba(0,0,0,.3) 51%,rgba(0,0,0,.3));
     }
 
     .logo-wrapper {
@@ -192,9 +203,9 @@ body {
     .navbar li a {
         display: block;
         padding: 19px 0 19px;
-        background: #565656;
+        background: #303030;
         color: #fafafa;
-        border-bottom: 0;
+        border: 0;
     }
 
     .navbar li a:visited {

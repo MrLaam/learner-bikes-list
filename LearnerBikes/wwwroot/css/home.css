@@ -159,38 +159,45 @@ a.browse-button:hover {
     .banner-wrapper {
         width: 100%;
     }
+}
 
-    @media (max-width: 540px) {
-        .banner-subtitle, .makes-subtitle {
-            margin: 0 25px 30px;
-        }
+@media (max-width: 600px) {
+    .banner-wrapper {
+        padding: 135px 0 50px;
+    }
+}
 
-        .banner-contents {
-            width: 95%;
-            padding-bottom: 65px;
-        }
 
-        .banner-img-wrapper {
-            width: 85%;
-            padding-bottom: 65px;
-        }
+@media (max-width: 540px) {
+    .banner-subtitle, .makes-subtitle {
+        margin: 0 25px 30px;
+    }
 
-        .bike-logos-img {
-            width: 95%;
-        }
+    .banner-contents {
+        width: 95%;
+        padding-bottom: 65px;
+    }
 
-        .makes-title {
+    .banner-img-wrapper {
+        width: 85%;
+        padding-bottom: 65px;
+    }
+
+    .bike-logos-img {
+        width: 95%;
+    }
+
+    .makes-title {
             margin-top: 25px;
-        }
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .brands-section__text {
+        padding: 0 10px 0 10px;
     }
 
-    @media (max-width: 1024px) and (orientation: landscape) {
-        .brands-section__text {
-            padding: 0 10px 0 10px;
-        }
-
-        .banner-img-wrapper {
-            display: none;
-        }
-    }
+/*    .banner-img-wrapper {
+        display: none;
+    }*/
 }

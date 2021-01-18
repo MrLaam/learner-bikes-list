@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="hamburger-wrapper">
-                    <img class="hamburger-menu" onclick="toggleDisplay('navbarToggle')" src="~/images/hamburger.png" />
+                    <img class="hamburger-menu" onclick="toggleNavbar('navbarToggle')" src="~/images/hamburger.png" />
                 </div>
 
                 <div class="navbar-wrapper" id="navbarToggle">
@@ -32,6 +32,7 @@
                         <li><a class="navbar-hyperlink" asp-area="" asp-controller="ContactUs" asp-action="Index">Contact Us</a></li>
                     </ul>
                 </div>
+                <div id="navbarBlankSpace" onclick="toggleNavbar('navbarToggle')" class="navbar-blank-space"></div>
             </nav>
             @RenderBody()
         </main>
