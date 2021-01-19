@@ -1,11 +1,20 @@
 ﻿body {
-    background: #D2D2D2;
+    background-image: linear-gradient(to right top, #ffa200, #ff9738, #ff8f55, #ff8a6e, #ff8983);
 }
 
 .contact-wrapper {
-    background: #D2D2D2;
+/*    background-image: url(/images/contact-background.svg);*/
     color: #000;
     min-height: 95vh;
+}
+
+.svg-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 
 .submit-button-wrapper {
@@ -48,7 +57,7 @@
     padding-top: 25px;
     background: #fafafa;
     margin: 0 auto;
-    background: #d2d2d2;
+    background: none;
 }
 
 .form-wrapper {
