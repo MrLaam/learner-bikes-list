@@ -12,16 +12,52 @@ namespace LearnerBikes.Models
         public BikeFiltersForm BikeFilters { get; set; }
         public int BikePerPage { get; set; }
         public int CurrentPage { get; set; }
-        public int TotalPages { get; set; }
 
-        public int PageCount()
+        public Tuple<int, int> PageCount(int pagesToDisplay, int pastMidPoint, int pagesOnEachSide, int endOfStartPage)
         {
-            return Convert.ToInt32(Math.Ceiling(Bikes.Count() / (double)BikePerPage));
+            int pageCount = Convert.ToInt32(Math.Ceiling(Bikes.Count() / (double)BikePerPage));
+            int startPage = 1;
+            int endPage = 1;
+            if (pageCount > 0)
+            {
+                if (pageCount <= pagesToDisplay)
+                {
+                    startPage = 1;
+                    endPage = pageCount;
+                } else
+                {
+                    if (CurrentPage >= pastMidPoint)
+                {
+                    startPage = CurrentPage - pagesOnEachSide;
+
+                    if (CurrentPage <= pageCount - pagesOnEachSide)
+                    {
+                        endPage = CurrentPage + pagesOnEachSide;
+                    } else
+                    {
+                        startPage = pageCount - endOfStartPage + 1;
+                        endPage = pageCount;
+                    }
+                    
+                } else
+                {
+                    startPage = 1;
+                    endPage = endOfStartPage;
+                }
+                }
+                
+            }
+            return Tuple.Create(startPage, endPage);
         }
         public IEnumerable<Bike> PaginatedBikes()
         {
             int start = (CurrentPage - 1) * BikePerPage;
             return Bikes.OrderBy(b => b.Id).Skip(start).Take(BikePerPage);
+        }
+
+        public int determineTotalPages()
+        {
+            return Convert.ToInt32(Math.Ceiling(Bikes.Count() / (double)BikePerPage));
         }
 
         public bool hasPreviousPage
@@ -35,7 +71,7 @@ namespace LearnerBikes.Models
         {
             get
             {
-                return (CurrentPage < TotalPages);
+                return (CurrentPage < determineTotalPages());
             }
         }
     }

@@ -82,19 +82,44 @@
         var nextDisabled = !Model.HasNextPage ? "disabled" : "";
     }
 
-<ul class="pagination">
-    <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage - 1 })" class="next-prev-link @prevDisabled">Previous</a></li>
-    @for (int i = 1; i <= Model.PageCount(); i++)
-    {
-        <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
-            <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
-        </li>
+<div class="bottom-bar">
+    <div class="pagination-wrapper">
 
-    }
-    <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage + 1 })" class="next-prev-link @nextDisabled">Next</a></li>
-</ul>
+        <div class="full-bottom-bar">
+            <ul class="pagination">
+                <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage - 1 })" class="next-prev-link @prevDisabled">Previous</a></li>
+                @for (int i = Model.PageCount(7, 5, 3, 7).Item1; i <= Model.PageCount(7, 5, 3, 7).Item2; i++)
+                {
+                    <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                    </li>
+
+                }
+                <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage + 1 })" class="next-prev-link @nextDisabled">Next</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-bottom-bar">
+            <ul class="pagination">
+                <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage - 1 })" class="next-prev-link @prevDisabled">&#8249;</a></li>
+                @for (int i = Model.PageCount(5, 4, 2, 5).Item1; i <= Model.PageCount(5, 4, 2, 5).Item2; i++)
+                {
+                    <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                    </li>
+
+                }
+                <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage + 1 })" class="next-prev-link @nextDisabled">&#8250;</a></li>
+            </ul>
+        </div>
+
+    </div>
 
     <div class="scroll-top-wrapper">
         <button id="scrollToTopBtn"><img src="~/images/up-arrow.png" class="up-arrow-icon" /></button>
     </div>
+
+
+</div>
+
 </div>
