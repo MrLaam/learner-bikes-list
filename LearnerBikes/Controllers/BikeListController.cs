@@ -18,12 +18,17 @@ namespace LearnerBikes.Controllers
             _db = db;
         }
 
-        public IActionResult Index(BikeListViewModel model)
+        public IActionResult Index(BikeListViewModel model, int page = 1)
         {
             model.Bikes = _db.Bikes;
+            model.BikePerPage = 15;
+            model.CurrentPage = page;
+            double totalPages = model.Bikes.Count() / model.BikePerPage;
+            totalPages = Math.Ceiling((double)totalPages);
+            model.TotalPages = Convert.ToInt32(totalPages);
             BikeFilterHelper helper = new BikeFilterHelper();
             model = helper.applyFilters(model);
-
+ 
             return View(model);
         }
     }

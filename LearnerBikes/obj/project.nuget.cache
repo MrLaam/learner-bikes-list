@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Sfyw5x+Dyl/spZeL+4YS1RV17EE09HrbDba1Wj8wIUs6fRdsTC1QWSR2yzkrm5tWjnfbt7wxtIDxxi5RwKKqaw==",
+  "dgSpecHash": "9RlZ/b25LE3DxW5xkgwoN8oBAjgzVV+2K/uhbqc4YIDJXa2kDwAU0f3vKf/trnk0wJ225MzHI210Ag5qXA1KAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\jorda\\source\\repos\\LearnerBikes\\LearnerBikes\\LearnerBikes.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,7 @@
     "C:\\Users\\jorda\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\jorda\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\jorda\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\jorda\\.nuget\\packages\\system.linq.queryable\\4.3.0\\system.linq.queryable.4.3.0.nupkg.sha512",
     "C:\\Users\\jorda\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\jorda\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\jorda\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",

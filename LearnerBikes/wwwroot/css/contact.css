@@ -9,9 +9,7 @@
 }
 
 .svg-background {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: fixed;
     z-index: -1;
     height: 100%;
     width: 100%;
@@ -64,9 +62,11 @@
     padding: 20px;
     font-weight: 500;
     margin: 57px 0 5vh;
-    box-shadow: 1px 1px 4px #808080;
+    background: rgba( 255, 255, 255, 0.75 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 4px );
     border-radius: 5px;
-    background: #fafafa;
 }
 
 .form-wrapper h4 {
@@ -79,6 +79,7 @@
     width: 100%;
     padding: 12px;
     box-sizing: border-box;
+    background: rgba( 255, 255, 255, 0.9 );
 }
 
 .form-wrapper input:focus, .form-wrapper textarea:focus {

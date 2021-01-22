@@ -60,11 +60,11 @@
         @if (Model.Bikes.Count() > 0)
         {
             <div class="card-wrapper">
-                @foreach (var bike in Model.Bikes)
+                @foreach (var bike in Model.PaginatedBikes())
                 {
                     <div class="bike-card">
                         <img class="bike-image" src="@bike.ImageUrl" />
-                        <h3>@bike.Make @bike.Model</h3>
+                        <h4>@bike.Make @bike.Model</h4>
                     </div>
                 }
             </div>
@@ -73,12 +73,28 @@
         {
             <p>Could not find any bikes.</p>
         }
+
     </div>
+
+    @{
+        ViewData["Title"] = "Browse";
+        var prevDisabled = !Model.hasPreviousPage ? "disabled" : "";
+        var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+    }
+
+<ul class="pagination">
+    <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage - 1 })" class="next-prev-link @prevDisabled">Previous</a></li>
+    @for (int i = 1; i <= Model.PageCount(); i++)
+    {
+        <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
+            <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+        </li>
+
+    }
+    <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage + 1 })" class="next-prev-link @nextDisabled">Next</a></li>
+</ul>
+
     <div class="scroll-top-wrapper">
         <button id="scrollToTopBtn"><img src="~/images/up-arrow.png" class="up-arrow-icon" /></button>
     </div>
 </div>
-
-@{
-ViewData["Title"] = "Browse";
-}

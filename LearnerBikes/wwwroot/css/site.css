@@ -31,14 +31,14 @@ body {
 }
 
 .logo-wrapper {
-    padding: 9px 16px 9px 16px;
+    padding: 14px 16px 14px 16px;
     text-align: center;
     border-bottom: solid #3A3A3A 0.5px;
     min-width: 198px;
 }
 
 .navbar-wrapper {
-    padding: 9px;
+    padding: 14px;
     border-bottom: solid #3A3A3A 0.5px;
     width: 100%;
 }
@@ -192,7 +192,17 @@ body {
 
 @media(min-width: 1921px) {
     html {
-        font-size: calc(min(max(1rem, 4vw), 20px));
+        font-size: calc(min(max(1rem, 4vw), 17px));
+    }
+}
+
+@media(max-width: 1920px) {
+    .navbar-wrapper {
+        padding: 12px;
+    }
+
+    .logo-wrapper {
+        padding: 12px 16px 12px 16px;
     }
 }
 
