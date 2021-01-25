@@ -2,10 +2,32 @@
     position: relative;
 }
 
+a { 
+    color: #fafafa;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fafafa;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: #fafafa
+}
+
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    /*align-items: stretch;*/
     min-height: 96vh;
 }
 
@@ -20,7 +42,8 @@
 .bike-list-wrapper {
     grid-row: 1 / 7;
     grid-column: 2 / 9;
-    background: #272727;
+    /*background: #272727;*/
+    background: #d3d3d3; 
     padding: 16px 16px 150px 16px;
     border-left: solid #3A3A3A 1px;
     border-bottom: solid #3A3A3A 1px;
@@ -35,19 +58,23 @@
 .bottom-bar {
     grid-row: 6 / 7;
     grid-column: 2 / 9;
-    background: #272727;
+    /*background: #272727;*/
+    background: #d3d3d3;
+    border-left: solid #3A3A3A 1px;
 }
 
 .bike-card {
     padding: 12px;
-    background-color: #444444;
+    /*background-color: #444444;*/
+    background: #434343c4;
     text-shadow: 1px 1px 4px #000000;
     border-radius: 2px;
     transition: 250ms ease-out;
     text-align: center;
 }
+
 .bike-card:hover {
-    opacity: 0.88;
+    opacity: 0.92;
     cursor: pointer;
 }
 
@@ -59,7 +86,7 @@
     max-width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-gap: 22px;
+    grid-gap: 20px;
     padding: 12px;
 }
 
@@ -331,6 +358,10 @@
     .select-dropdown {
         width: 85%;
         height: 40px;
+    }
+
+    .bottom-bar {
+        border-left: none;
     }
 }
 

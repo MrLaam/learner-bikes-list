@@ -18,14 +18,22 @@ namespace LearnerBikes.Controllers
             _db = db;
         }
 
-        public IActionResult Index(BikeListViewModel model, int page = 1)
-        {
+        public IActionResult Index(BikeListViewModel model, BikeFiltersForm filters, int page = 1)
+        {          
             model.Bikes = _db.Bikes;
             model.BikePerPage = 30;
             model.CurrentPage = page;
             BikeFilterHelper helper = new BikeFilterHelper();
             model = helper.applyFilters(model);
  
+            return View(model);
+        }
+
+        public IActionResult Bike(int id, BikeFiltersForm filters)
+        {
+            BikeListViewModel model = new BikeListViewModel();
+            model.BikeFilters = filters;
+            model.IndividualBike = _db.Bikes.FirstOrDefault(s => s.Id == id);
             return View(model);
         }
     }

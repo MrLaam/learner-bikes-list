@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LearnerBikes.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201221235221_addBikeToDatabase")]
+    [Migration("20210123143951_addBikeToDatabase")]
     partial class addBikeToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,6 +30,9 @@ namespace LearnerBikes.Migrations
                     b.Property<string>("BikeType")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("DryWeight")
+                        .HasColumnType("int");
+
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
@@ -48,8 +51,11 @@ namespace LearnerBikes.Migrations
                     b.Property<string>("Power")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
+                    b.Property<string>("SeatHeight")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("TankCapacity")
+                        .HasColumnType("float");
 
                     b.Property<int>("WetWeight")
                         .HasColumnType("int");

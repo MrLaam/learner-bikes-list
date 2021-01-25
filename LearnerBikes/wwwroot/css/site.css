@@ -15,9 +15,8 @@ body {
 
 .nav-wrapper {
     background: #121212;
-    display: flex;
-    align-items: stretch;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
 }
 
 .navbar-blank-space {
@@ -31,6 +30,8 @@ body {
 }
 
 .logo-wrapper {
+    grid-row: 1 / 7;
+    grid-column: 1 / 2;
     padding: 14px 16px 14px 16px;
     text-align: center;
     border-bottom: solid #3A3A3A 0.5px;
@@ -38,9 +39,10 @@ body {
 }
 
 .navbar-wrapper {
+    grid-row: 1 / 7;
+    grid-column: 2 / 9;
     padding: 14px;
     border-bottom: solid #3A3A3A 0.5px;
-    width: 100%;
 }
 
 .navbar-wrapper, .logo-wrapper, .hamburger-wrapper {
@@ -216,7 +218,7 @@ body {
 
 @media (min-width: 601px) {
     .navbar-wrapper {
-        display: block !important;
+        display: grid !important;
     }
 
     .navbar li a:hover {
@@ -233,6 +235,7 @@ body {
         position: fixed;
         z-index: 3;
         top: 0;
+        width: 100%;
     }
 
     .navbar-blank-space {

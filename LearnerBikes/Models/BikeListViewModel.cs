@@ -10,6 +10,7 @@ namespace LearnerBikes.Models
     {
         public IEnumerable<Bike> Bikes { get; set; }
         public BikeFiltersForm BikeFilters { get; set; }
+        public Bike IndividualBike { get; set; }
         public int BikePerPage { get; set; }
         public int CurrentPage { get; set; }
 

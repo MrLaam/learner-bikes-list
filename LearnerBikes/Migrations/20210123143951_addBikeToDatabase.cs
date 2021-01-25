@@ -14,10 +14,12 @@ namespace LearnerBikes.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Make = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Model = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Price = table.Column<int>(type: "int", nullable: false),
                     Power = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DryWeight = table.Column<int>(type: "int", nullable: false),
                     WetWeight = table.Column<int>(type: "int", nullable: false),
+                    TankCapacity = table.Column<double>(type: "float", nullable: false),
                     BikeType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SeatHeight = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MinYear = table.Column<int>(type: "int", nullable: false),
                     MaxYear = table.Column<int>(type: "int", nullable: false)

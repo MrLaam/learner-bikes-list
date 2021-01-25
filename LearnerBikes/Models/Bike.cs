@@ -15,13 +15,17 @@ namespace LearnerBikes.Models
 
         public string Model { get; set; }
 
-        public int Price { get; set; }
-
         public string Power { get; set; }
+
+        public int DryWeight { get; set; }
 
         public int WetWeight { get; set; }
 
+        public double TankCapacity { get; set; }
+
         public string BikeType { get; set; }
+
+        public string SeatHeight { get; set; }
 
         public string ImageUrl { get; set; }
 

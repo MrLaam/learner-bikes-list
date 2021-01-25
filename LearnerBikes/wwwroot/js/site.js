@@ -1,4 +1,8 @@
-﻿/*Open and close mobile navigation menu*/
+﻿if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+}
+
+/*Open and close mobile navigation menu*/
 function toggleNavbar(id) {
     var filterSection = document.getElementById(id);
     var navbarBlankSpace = document.getElementById('navbarBlankSpace');

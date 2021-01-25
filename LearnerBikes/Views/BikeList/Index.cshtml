@@ -53,7 +53,6 @@
 
             </form>
         </div>
-
     </div>
 
     <div class="bike-list-wrapper">
@@ -62,10 +61,12 @@
             <div class="card-wrapper">
                 @foreach (var bike in Model.PaginatedBikes())
                 {
+                <a asp-controller="BikeList" asp-action="Bike" asp-route-id="@bike.Id">
                     <div class="bike-card">
                         <img class="bike-image" src="@bike.ImageUrl" />
                         <h4>@bike.Make @bike.Model</h4>
                     </div>
+                </a>
                 }
             </div>
         }
