@@ -20,6 +20,12 @@ function toggleNavbar(id) {
 }
 /**/
 
+/*Reset bike filters*/
+function resetFilters() {
+    document.getElementById('bikeFilterForm').reset();
+}
+/**/
+
 /*Hamburger animation*/
 var hamburger = document.getElementById("hamburger-icon");
 

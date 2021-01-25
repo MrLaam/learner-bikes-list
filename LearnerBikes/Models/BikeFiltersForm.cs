@@ -8,7 +8,7 @@ namespace LearnerBikes.Models
     public class BikeFiltersForm
     {
         public string Make { get; set; }
-        public int MaxPrice { get; set; }
+        public string SortOrder { get; set; }
         public string Type { get; set; }
         public int Age { get; set; }
     }

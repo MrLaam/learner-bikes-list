@@ -53,7 +53,7 @@ namespace LearnerBikes.Models
         public IEnumerable<Bike> PaginatedBikes()
         {
             int start = (CurrentPage - 1) * BikePerPage;
-            return Bikes.OrderBy(b => b.Id).Skip(start).Take(BikePerPage);
+            return Bikes.Skip(start).Take(BikePerPage);
         }
 
         public int determineTotalPages()

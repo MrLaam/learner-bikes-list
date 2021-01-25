@@ -50,6 +50,14 @@ namespace LearnerBikes.Helpers
                 viewModel.Bikes = viewModel.Bikes.Where(s => s.BikeType.Contains(viewModel.BikeFilters.Type));
             }
 
+            if (viewModel.BikeFilters.SortOrder.Equals("[A-Z]"))
+            {
+                viewModel.Bikes = viewModel.Bikes.OrderBy(s => s.Make).ThenBy(s => s.Model);
+            } else if (viewModel.BikeFilters.SortOrder.Equals("[Z-A]"))
+            {
+                viewModel.Bikes = viewModel.Bikes.OrderByDescending(s => s.Make).ThenBy(s => s.Model);
+            }
+
             return viewModel;
         }
 

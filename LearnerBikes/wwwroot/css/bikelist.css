@@ -39,6 +39,10 @@ a:hover, a:active {
     min-width: 180px;
 }
 
+.filter-icon-sort-wrapper {
+    display: inline-block;
+}
+
 .bike-list-wrapper {
     grid-row: 1 / 7;
     grid-column: 2 / 9;
@@ -116,13 +120,40 @@ a:hover, a:active {
     color: #fafafa;
 }
 
-.filter {
+.filter, .filter-reset {
     padding: 15px 0 15px 0;
+}
+
+.sort-filter {
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+.sort-filter p {
+    text-align: right;
+}
+
+.sort-dropdown {
+    width: 60%;
+    float: right;
+}
+
+.filter-reset {
+    text-align: center;
+}
+
+.filter-reset a {
+    color: #CAE4F1;
 }
 
 .filter-title {
     margin: 0;
     padding: 8px 0 8px 0;
+}
+
+#make-title {
+    border-top: solid #3A3A3A 1px;
+    padding-top: 30px;
 }
 
 #scrollToTopBtn {
@@ -300,7 +331,7 @@ a:hover, a:active {
 
 @media (min-width: 601px) {
     .filter-section-wrapper {
-        padding: 25px !important;
+        padding: 20px 25px 25px 25px !important;
     }
 
     .filter-wrapper {
@@ -309,6 +340,13 @@ a:hover, a:active {
 }
 
 @media (max-width: 600px) {
+    .sort-dropdown {
+        float: unset;
+    }
+    .sort-filter {
+        padding-bottom: 55px;
+    }
+    
     .scroll-top-wrapper {
         margin-right: 16px;
     }
@@ -358,6 +396,7 @@ a:hover, a:active {
 
     .select-dropdown-wrapper {
         text-align: center;
+        overflow: hidden;
     }
 
     .select-dropdown {
