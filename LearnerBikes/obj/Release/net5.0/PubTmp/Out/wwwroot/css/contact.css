@@ -1,0 +1,155 @@
+﻿body {
+    background-image: linear-gradient(to right top, #ffa200, #ff9738, #ff8f55, #ff8a6e, #ff8983);
+}
+
+.contact-wrapper {
+/*    background-image: url(/images/contact-background.svg);*/
+    color: #000;
+    min-height: 95vh;
+}
+
+.svg-background {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.submit-button-wrapper {
+    text-align: center;
+}
+
+.submit-button {
+    margin: 25px 0 25px 0;
+    display: inline-block;
+    padding: 0.8em 3.5em;
+    border-radius: 0.25em;
+    border-color: #000;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    background-color: #000;
+    color: #fafafa;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 220px;
+    user-select: none;
+}
+
+.back-to-home {
+    width: auto;
+}
+
+.submit-button:hover {
+    background-color: #323232;
+    border-color: #323232;
+}
+
+.submit-button:hover, .submit-button:focus {
+    outline: 0 none !important;
+}
+
+.form-box-wrapper {
+    width: 600px;
+    padding-top: 25px;
+    background: #fafafa;
+    margin: 0 auto;
+    background: none;
+}
+
+.form-wrapper {
+    padding: 20px;
+    font-weight: 500;
+    margin: 57px 0 5vh;
+    background: rgba( 255, 255, 255, 0.75 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 5px;
+}
+
+.form-wrapper h4 {
+    margin: 10px 0 10px;
+    float: left;
+}
+
+.form-wrapper input[type=text], .form-wrapper input[type=email], .form-wrapper textarea {
+    border: 1px solid #A9A9A9;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: rgba( 255, 255, 255, 0.9 );
+}
+
+.form-wrapper input:focus, .form-wrapper textarea:focus {
+    outline: 1px solid #000;
+}
+
+.msg-textarea {
+    height: 16vh;
+    width: 99.5%;
+    max-width: 99.5%;
+}
+
+.title-validation-wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.title-validation-wrapper span {
+    margin: 10px 15px 10px;
+    display: inline-block;
+    color: #ff0033;
+    float: right;
+}
+
+.title-tick-wrapper {
+    font-size: calc(min(max(2rem, 4vw), 16px));
+    display: inline-block;
+    width: 100%;
+}
+
+.tick-image {
+    float: left;
+    padding-right: 10px;
+}
+
+.form-wrapper p {
+    text-align: center;
+    font-size: calc(min(max(2rem, 4vw), 18px));
+}
+
+.back-to-home-wrapper {
+    text-align: center;
+}
+
+.back-to-home-wrapper a {
+    padding: 0.3em 2em; 
+}
+
+/*Media Queries*/
+@media (max-width: 640px) {
+    .form-box-wrapper {
+        width: 90%;
+    }
+    
+    .tick-image {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .title-tick-wrapper h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .submit-button, .back-to-home-wrapper a {
+        width: 100%;
+        padding: 1em 3.5em !important;
+    }
+}
+/**/

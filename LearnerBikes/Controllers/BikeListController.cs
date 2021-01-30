@@ -24,9 +24,10 @@ namespace LearnerBikes.Controllers
             model.BikePerPage = 30;
             model.CurrentPage = page;
             BikeFilterHelper helper = new BikeFilterHelper();
-            model = helper.applyFilters(model);
- 
-            return View(model);
+
+                model = helper.applyFilters(model);
+
+                return View(model);
         }
 
         public IActionResult Bike(int id, BikeFiltersForm filters)

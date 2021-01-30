@@ -5,7 +5,7 @@
 <div class="content-wrapper">
     <div class="filter-section-wrapper">
             <div class="filter-icon-wrapper">
-                <img class="filter-icon" src="~/images/filtericon.png" onclick="toggleFilter('filter')" />
+                <img class="filter-icon" src="~/images/filtericon.png" onclick="toggleFilter('filter')" alt="Filter toggle icon" />
             </div>          
 
         <div class="filter-wrapper" id="filter">
@@ -80,8 +80,8 @@
                 {
                 <a asp-controller="BikeList" asp-action="Bike" asp-route-id="@bike.Id">
                     <div class="bike-card">
-                        <img class="bike-image" src="@bike.ImageUrl" />
-                        <h4>@bike.Make @bike.Model</h4>
+                        <img class="bike-image" src="@bike.ImageUrl" alt="Image of a @bike.Make @bike.Model" />
+                        <h1>@bike.Make @bike.Model</h1>
                     </div>
                 </a>
                 }
@@ -134,7 +134,7 @@
     </div>
 
     <div class="scroll-top-wrapper">
-        <button id="scrollToTopBtn"><img src="~/images/up-arrow.png" class="up-arrow-icon" /></button>
+        <button id="scrollToTopBtn"><img src="~/images/up-arrow.png" class="up-arrow-icon" alt="Arrow pointing upwards"/></button>
     </div>
 
 

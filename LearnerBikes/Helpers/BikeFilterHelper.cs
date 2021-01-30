@@ -14,6 +14,7 @@ namespace LearnerBikes.Helpers
 
             if (viewModel.BikeFilters == null)
             {
+                viewModel.Bikes = viewModel.Bikes.OrderBy(s => s.Make).ThenBy(s => s.Model);
                 return viewModel;
             }
 

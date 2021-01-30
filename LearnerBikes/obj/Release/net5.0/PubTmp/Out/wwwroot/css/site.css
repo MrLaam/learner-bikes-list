@@ -1,0 +1,329 @@
+﻿* {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    font-size: calc(min(max(1rem, 4vw), 16px));
+    color: #fafafa;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.nav-wrapper {
+    background: #121212;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.navbar-blank-space {
+    display: none;
+}
+
+.header-logo {
+    text-decoration: none;
+    color: #fafafa;
+    padding: 0 10px 0 10px;
+}
+
+.logo-wrapper {
+    grid-row: 1 / 7;
+    grid-column: 1 / 2;
+    padding: 14px 16px 14px 16px;
+    text-align: center;
+    border-bottom: solid #3A3A3A 0.5px;
+    min-width: 198px;
+}
+
+.navbar-wrapper {
+    grid-row: 1 / 7;
+    grid-column: 2 / 9;
+    padding: 14px;
+    border-bottom: solid #3A3A3A 0.5px;
+}
+
+.navbar-wrapper, .logo-wrapper, .hamburger-wrapper {
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-hyperlink {
+    color: inherit;
+}
+
+.hamburger-wrapper {
+    display: none;
+    border: solid #3A3A3A 1px;
+}
+
+.hamburger-menu {
+    display: none;
+    height: 25px;
+    width: 32px;
+    padding: 16px;
+}
+
+#hamburger-icon {
+    display: none;
+    width: 30px;
+    height: 17px;
+    position: relative;
+    float: right;
+    margin: 14px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+#hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fafafa;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+#hamburger-icon span:nth-child(1) {
+    top: 0px;
+}
+
+#hamburger-icon span:nth-child(2), #hamburger-icon span:nth-child(3) {
+    top: 7px;
+}
+
+#hamburger-icon span:nth-child(4) {
+    top: 14px;
+}
+
+#hamburger-icon.open span:nth-child(1) {
+    top: 12px;
+    width: 0%;
+    left: 50%;
+}
+
+#hamburger-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#hamburger-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#hamburger-icon.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.hamburger-menu:hover {
+    cursor: pointer;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0 20px 0 20px;
+    float: left;
+}
+
+.navbar li a {
+    padding-bottom: 4px;
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    border-bottom: 1px solid transparent;
+    color: #fafafa;
+}
+.navbar li a:link {
+    text-decoration: none;
+}
+.navbar li a:visited {
+    color: #fafafa;
+}
+.navbar li a:active {
+}
+
+.main-footer {
+    width: 100%;
+    height: 250px;
+    background: #121212;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-copyright {
+    font-size: 12px;
+    padding: 20px;
+}
+
+/*Media Queries*/
+@media (hover: hover) and (pointer: fine) {
+}
+
+@media(min-width: 1921px) {
+    html {
+        font-size: calc(min(max(1rem, 4vw), 17px));
+    }
+}
+
+@media(max-width: 1920px) {
+    .navbar-wrapper {
+        padding: 12px;
+    }
+
+    .logo-wrapper {
+        padding: 12px 16px 12px 16px;
+    }
+}
+
+@media (max-width: 1279px) {
+
+}
+
+@media (max-width: 700px) {
+
+}
+
+@media (min-width: 601px) {
+    .navbar-wrapper {
+        display: grid !important;
+    }
+
+    .navbar li a:hover {
+        border-bottom: 2px solid #FFAA00;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        width: 100%;
+        border-bottom: solid #3A3A3A 1px;
+    }
+
+    .navbar-blank-space {
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background: linear-gradient(rgba(0,0,0,.5) 51%,rgba(0,0,0,.5));
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
+
+    .hamburger-wrapper, .logo-wrapper {
+        flex: 1 1 0;
+        border: 0;
+    }
+
+    .hamburger-wrapper {
+        display: block;
+        padding: 7px;
+        width: 182px;
+    }
+
+    .hamburger-menu {
+        display: block;
+        float: right;
+    }
+
+    .navbar-wrapper {
+        display: none;
+        flex: 100%;
+        order: 3;
+        padding: 0;
+        position: fixed;
+        top: 57px;
+        right: 0;
+        left: 0;
+        border: 0;
+    }
+
+    .logo-wrapper {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 16px;
+    }
+
+    .navbar li {
+        float: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .navbar li a {
+        display: block;
+        padding: 19px 0 19px;
+        background: #303030;
+        color: #fafafa;
+        border: 0;
+    }
+
+    .navbar li a:visited {
+        color: #fafafa;
+    }
+
+    #center-nav-styling a {
+/*        border-top: solid #3A3A3A 0.5px;
+        border-bottom: solid #3A3A3A 0.5px;*/
+        border: 0;
+    }
+}
+
+@media (max-width: 250px) {
+    html {
+        overflow-x: scroll;
+    }
+
+    .logo-wrapper, .hamburger-wrapper {
+        min-width: unset;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .main-footer {
+        height: 150px;
+    }
+}

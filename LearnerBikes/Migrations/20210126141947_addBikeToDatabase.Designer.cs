@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LearnerBikes.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210123143951_addBikeToDatabase")]
+    [Migration("20210126141947_addBikeToDatabase")]
     partial class addBikeToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
