@@ -16,6 +16,7 @@ body {
 .nav-wrapper {
     background: #121212;
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(8, 1fr);
 }
 
@@ -23,26 +24,32 @@ body {
     display: none;
 }
 
+@font-face {
+    font-family: logoFont;
+    src: url(/lib/fonts/florencesans-sc.black.ttf);
+}
+
 .header-logo {
+    font-family: logoFont;
     text-decoration: none;
+    font-size: 35px;
     color: #fafafa;
     padding: 0 10px 0 10px;
 }
 
 .logo-wrapper {
-    grid-row: 1 / 7;
+    grid-row: 1 / 2;
     grid-column: 1 / 2;
-    padding: 14px 16px 14px 16px;
+    padding: 5px 16px 5px 16px;
     text-align: center;
-    border-bottom: solid #3A3A3A 0.5px;
     min-width: 198px;
+    
 }
 
 .navbar-wrapper {
-    grid-row: 1 / 7;
+    grid-row: 1 / 2;
     grid-column: 2 / 9;
     padding: 14px;
-    border-bottom: solid #3A3A3A 0.5px;
 }
 
 .navbar-wrapper, .logo-wrapper, .hamburger-wrapper {
@@ -204,7 +211,7 @@ body {
     }
 
     .logo-wrapper {
-        padding: 12px 16px 12px 16px;
+        padding: 2px 16px 2px 16px;
     }
 }
 
@@ -284,7 +291,8 @@ body {
     .logo-wrapper {
         display: inline-block;
         box-sizing: border-box;
-        padding: 16px;
+        padding: 8px 12px 8px;
+        text-align: left;
     }
 
     .navbar li {
@@ -306,8 +314,6 @@ body {
     }
 
     #center-nav-styling a {
-/*        border-top: solid #3A3A3A 0.5px;
-        border-bottom: solid #3A3A3A 0.5px;*/
         border: 0;
     }
 }

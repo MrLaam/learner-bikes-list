@@ -1,31 +1,36 @@
 ﻿@model LearnerBikes.Models.Contact
 
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
 <link rel="stylesheet" href="~/css/contact.css" />
 
 <div class="contact-wrapper">
     <!--<svg xmlns="http://www.w3.org/2000/svg" class="svg-background" preserveAspectRatio="none" viewBox="0 0 1440 320">
-        <path fill="#d3d3d3" fill-opacity="1" d="M0,175L2800,128L1440,320L0,320Z"></path>--> @*M0,175L2000,128L1440,320L0,320Z*@
-        @*TODO: Fix svg from changing when input is selected on mobile*@
+        <path fill="#d3d3d3" fill-opacity="1" d="M0,175L2800,128L1440,320L0,320Z"></path>-->
+    @*M0,175L2000,128L1440,320L0,320Z*@
+    @*TODO: Fix svg from changing when input is selected on mobile*@
     <!--</svg>-->
     <div class="form-box-wrapper">
         <div class="form-wrapper">
             <h1>Contact Us</h1>
             <form id="contactForm" method="post" asp-action="Index" asp-controller="ContactUs">
                 <div class="title-validation-wrapper">
-                    <h4>Name</h4>
+                    <h2>Name</h2>
                     <span asp-validation-for="senderName"></span>
                 </div>
                 <input type="text" asp-for="senderName" placeholder="Your name" />
                 <br /> <br />
                 <div class="title-validation-wrapper">
-                    <h4>Email</h4>
+                    <h2>Email</h2>
                     <span asp-validation-for="senderEmail"></span>
                 </div>
 
                 <input type="email" asp-for="senderEmail" placeholder="Your email address" />
                 <br /> <br />
                 <div class="title-validation-wrapper">
-                    <h4>Message</h4>
+                    <h2>Message</h2>
                     <span asp-validation-for="senderMessage"></span>
                 </div>
                 <textarea class="msg-textarea" asp-for="senderMessage" placeholder="Enter your message..."></textarea>

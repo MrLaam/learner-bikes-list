@@ -29,6 +29,12 @@ namespace LearnerBikes.Models
 
         public string ImageUrl { get; set; }
 
+        public string ThumbnailUrl { get; set; }
+
+        public string Transmission { get; set; }
+
+        public string Engine { get; set; }
+
         public int MinYear { get; set; }
 
         public int MaxYear { get; set; }

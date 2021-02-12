@@ -1,18 +1,22 @@
 ﻿@model LearnerBikes.Models.BikeListViewModel
 
+@{
+    ViewData["Title"] = Model.IndividualBike.Make + " " + Model.IndividualBike.Model;
+}
+
 <link rel="stylesheet" href="~/css/bike.css" />
 
 <div class="page-wrapper">
     <div class="content-wrapper">
         <div class="title-wrapper">
             <div class="title">
-                <h1 class="bike-title">@Model.IndividualBike.Make @Model.IndividualBike.Model (@Model.IndividualBike.MinYear-@Model.IndividualBike.MaxYear)</h1>               
-            </div>           
+                <h1 class="bike-title">@Model.IndividualBike.Make @Model.IndividualBike.Model (@Model.IndividualBike.MinYear-@Model.IndividualBike.MaxYear)</h1>
+            </div>
         </div>
 
         <div class="image-wrapper">
             <div class="image">
-                <img class="bike-image" src="@Model.IndividualBike.ImageUrl" alt="Image of @Model.IndividualBike.Make @Model.IndividualBike.Model" />
+                <img class="bike-image" src="@Model.IndividualBike.ImageUrl" alt="@Model.IndividualBike.Make @Model.IndividualBike.Model" />
             </div>
         </div>
 
@@ -20,13 +24,30 @@
             <h2>Key Specs</h2>
             <div class="specs">
                 <h3>Power: @Model.IndividualBike.Power</h3>
-                <h3>Dry weight: @Model.IndividualBike.DryWeight kg</h3>
-                <h3>Wet weight: @Model.IndividualBike.WetWeight kg</h3>
-                <h3>Fuel capacity: @Model.IndividualBike.TankCapacity L</h3>
+                @if (Model.IndividualBike.DryWeight != 0)
+                {
+                    <h3>Dry weight: @Model.IndividualBike.DryWeight kg</h3>
+                }
+                @if (Model.IndividualBike.WetWeight != 0)
+                {
+                    <h3>Wet weight: @Model.IndividualBike.WetWeight kg</h3>
+                }
+                <h3>Bike type: @Model.IndividualBike.BikeType</h3>
+                <h3>Engine: @Model.IndividualBike.Engine</h3>
+                <h3>Transmission: @Model.IndividualBike.Transmission</h3>
+                @if (Model.IndividualBike.TankCapacity == 0)
+                {
+                    <h3>Fuel capacity: -</h3>
+                }
+                else
+                {
+                    <h3>Fuel capacity: @Model.IndividualBike.TankCapacity L</h3>
+                }
+
                 <h3>Seat height: @Model.IndividualBike.SeatHeight</h3>
-            </div>           
+            </div>
         </div>
 
-        
+
     </div>
 </div>

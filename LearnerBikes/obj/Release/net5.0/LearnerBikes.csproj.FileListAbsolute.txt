@@ -71,3 +71,6 @@ C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\Learner
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\ref\LearnerBikes.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\LearnerBikes.pdb
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\LearnerBikes.genruntimeconfig.cache
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Release\net5.0\AspNetCore.SEOHelper.dll
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Release\net5.0\System.Diagnostics.DiagnosticSource.dll

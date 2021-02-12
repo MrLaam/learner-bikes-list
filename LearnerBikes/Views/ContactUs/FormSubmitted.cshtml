@@ -1,19 +1,23 @@
 ﻿@model LearnerBikes.Models.Contact
 
+@{
+    ViewData["Title"] = "Success";
+}
+
 <link rel="stylesheet" href="~/css/contact.css" />
 
 <div class="contact-wrapper">
     <div class="form-box-wrapper">
         <div class="form-wrapper">
             <div class="title-tick-wrapper">
-                <img class="tick-image" src="~/images/tick.png" alt="Image of a green tick symbol" />
-                <h2>Your message has been sent successfully.</h2>
+                <img class="tick-image" src="~/images/tick.png" alt="Green tick symbol" />
+                <h1>Your message has been sent successfully.</h1>
             </div>
             <p>Thank you! We'll get back to you soon.</p>
             <br />
             <div class="back-to-home-wrapper">
                 <a class="submit-button back-to-home" asp-action="Index" asp-controller="Home">Back To Home</a>
-            </div>           
+            </div>
         </div>
 
     </div>

@@ -1,12 +1,16 @@
 ﻿@model LearnerBikes.Models.BikeListViewModel
 
+@{
+    ViewData["Title"] = "Browse";
+}
+
 <link rel="stylesheet" href="~/css/bikelist.css" />
 
 <div class="content-wrapper">
     <div class="filter-section-wrapper">
-            <div class="filter-icon-wrapper">
-                <img class="filter-icon" src="~/images/filtericon.png" onclick="toggleFilter('filter')" alt="Filter toggle icon" />
-            </div>          
+        <div class="filter-icon-wrapper">
+            <img class="filter-icon" src="~/images/filtericon.png" onclick="toggleFilter('filter')" alt="Filter toggle icon" />
+        </div>
 
         <div class="filter-wrapper" id="filter">
 
@@ -14,8 +18,8 @@
 
                 <div class="sort-filter">
                     <div class="select-dropdown-wrapper">
-                        <p class="filter-title">Sort by:</p>
-                        <select class="select-dropdown sort-dropdown" asp-for="BikeFilters.SortOrder">
+                        <label for="selectDropdown" class="filter-title">Sort by:</label>
+                        <select id="selectDropdown" class="select-dropdown sort-dropdown" asp-for="BikeFilters.SortOrder">
                             <option selected="selected" value="[A-Z]">Name (A-Z)</option>
                             <option value="[Z-A]">Name (Z-A)</option>
                         </select>
@@ -24,21 +28,21 @@
 
                 <div class="filter">
                     <div class="select-dropdown-wrapper">
-                        <p class="filter-title" id="make-title">Make</p>
-                        <select class="select-dropdown" asp-for="BikeFilters.Make">
+                        <label for="makeFilter" class="filter-title" id="make-title">Make</label>
+                        <select id="makeFilter" class="select-dropdown" asp-for="BikeFilters.Make">
                             <option selected="selected" value="Any Make">Make (Any)</option>
-                            <option value="Aprilia">Aprilia</option>
-                            <option value="Honda">Honda</option>
-                            <option value="KTM">KTM</option>
-                            <option value="Yamaha">Yamaha</option>
+                            @foreach(var make in Model.Bikes.OrderBy(s => s.Make).Select(s => s.Make).Distinct())
+                            {
+                                <option value="@make">@make</option>
+                            }
                         </select>
                     </div>
                 </div>
 
                 <div class="filter">
                     <div class="select-dropdown-wrapper">
-                        <p class="filter-title">Age</p>
-                        <select class="select-dropdown" asp-for="BikeFilters.Age">
+                        <label for="bikeAgeFilter" class="filter-title">Age</label>
+                        <select id="bikeAgeFilter" class="select-dropdown" asp-for="BikeFilters.Age">
                             <option selected="selected" value="0">Up To (Any)</option>
                             <option value="1">Up to 1 year</option>
                             <option value="2">Up to 2 years</option>
@@ -52,13 +56,13 @@
 
                 <div class="filter">
                     <div class="select-dropdown-wrapper">
-                        <p class="filter-title">Bike Type</p>
-                        <select class="select-dropdown" asp-for="BikeFilters.Type">
+                        <label for="bikeTypeFilter" class="filter-title">Bike Type</label>
+                        <select id="bikeTypeFilter" class="select-dropdown" asp-for="BikeFilters.Type">
                             <option selected="selected" value="Any Type">Type (Any)</option>
-                            <option value="Supersport">Supersport</option>
-                            <option value="Naked">Naked</option>
-                            <option value="Adventure">Adventure</option>
-                            <option value="Cruiser">Cruiser</option>
+                            @foreach (var bikeType in Model.Bikes.OrderBy(s => s.BikeType).Select(s => s.BikeType).Distinct())
+                            {
+                                <option value="@bikeType">@bikeType</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -73,18 +77,18 @@
     </div>
 
     <div class="bike-list-wrapper">
-        @if (Model.Bikes.Count() > 0)
-        {
+        @if (Model.Bikes.Count() > 0) {
             <div class="card-wrapper">
                 @foreach (var bike in Model.PaginatedBikes())
                 {
-                <a asp-controller="BikeList" asp-action="Bike" asp-route-id="@bike.Id">
-                    <div class="bike-card">
-                        <img class="bike-image" src="@bike.ImageUrl" alt="Image of a @bike.Make @bike.Model" />
-                        <h1>@bike.Make @bike.Model</h1>
-                    </div>
-                </a>
+                    <a asp-controller="BikeList" asp-action="Bike" asp-route-id="@bike.Id">
+                        <div class="bike-card">
+                            <img class="bike-image" src="@bike.ThumbnailUrl" alt="Image of a @bike.Make @bike.Model" />
+                            <h1>@bike.Make @bike.Model</h1>
+                        </div>
+                    </a>
                 }
+
             </div>
         }
         else
@@ -94,50 +98,50 @@
 
     </div>
 
-    @{
-        ViewData["Title"] = "Browse";
+    @{ 
         var prevDisabled = !Model.hasPreviousPage ? "disabled" : "";
         var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+        var nextPageNo = Model.CurrentPage + 1;
+        var prevPageNo = Model.CurrentPage - 1;
     }
 
-<div class="bottom-bar">
-    <div class="pagination-wrapper">
+    <div class="bottom-bar">
+        <div class="pagination-wrapper">
 
-        <div class="full-bottom-bar">
-            <ul class="pagination">
-                <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage - 1 })" class="next-prev-link @prevDisabled">Previous</a></li>
-                @for (int i = Model.PageCount(7, 5, 3, 7).Item1; i <= Model.PageCount(7, 5, 3, 7).Item2; i++)
-                {
-                    <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
-                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
-                    </li>
+            <div class="full-bottom-bar">
+                <ul class="pagination">
+                    <li class="next-prev"><a asp-controller="BikeList" asp-action="Index" asp-route-page="@prevPageNo" class="next-prev-link @prevDisabled">Previous</a></li>
+                    @for (int i = Model.PageCount(7, 5, 3, 7).Item1; i <= Model.PageCount(7, 5, 3, 7).Item2; i++) {
+                        <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
+                            <a class="page-link" asp-controller="BikeList" asp-action="Index" asp-route-page="@{@i}">@i</a>
+                        </li>
 
-                }
-                <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage + 1 })" class="next-prev-link @nextDisabled">Next</a></li>
-            </ul>
+                    }
+                    <li class="next-prev"><a asp-controller="BikeList" asp-action="Index" asp-route-page="@nextPageNo" class="next-prev-link @nextDisabled">Next</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-bottom-bar">
+                <ul class="pagination">
+                    <li class="next-prev"><a asp-controller="BikeList" asp-action="Index" asp-route-page="@prevPageNo" class="next-prev-link @prevDisabled">&#8249;</a></li>
+                    @for (int i = Model.PageCount(5, 4, 2, 5).Item1; i <= Model.PageCount(5, 4, 2, 5).Item2; i++)
+                    {
+                        <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
+                            <a class="page-link" asp-controller="BikeList" asp-action="Index" asp-route-page="@{@i}">@i</a>
+                        </li>
+
+                    }
+                    <li class="next-prev"><a asp-controller="BikeList" asp-action="Index" asp-route-page="@nextPageNo" class="next-prev-link @nextDisabled">&#8250;</a></li>
+                </ul>
+            </div>
+
         </div>
 
-        <div class="mobile-bottom-bar">
-            <ul class="pagination">
-                <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage - 1 })" class="next-prev-link @prevDisabled">&#8249;</a></li>
-                @for (int i = Model.PageCount(5, 4, 2, 5).Item1; i <= Model.PageCount(5, 4, 2, 5).Item2; i++)
-                {
-                    <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
-                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
-                    </li>
-
-                }
-                <li class="next-prev"><a href="@Url.Action("Index", new { page = Model.CurrentPage + 1 })" class="next-prev-link @nextDisabled">&#8250;</a></li>
-            </ul>
+        <div class="scroll-top-wrapper">
+            <button id="scrollToTopBtn"><img src="~/images/up-arrow.png" class="up-arrow-icon" alt="Arrow pointing upwards" /></button>
         </div>
 
+
     </div>
-
-    <div class="scroll-top-wrapper">
-        <button id="scrollToTopBtn"><img src="~/images/up-arrow.png" class="up-arrow-icon" alt="Arrow pointing upwards"/></button>
-    </div>
-
-
-</div>
 
 </div>

@@ -7,11 +7,9 @@ C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.ico
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\images\bike-logos.png
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\images\contact-background.svg
-C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\images\duke.png
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\images\filtericon.png
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\images\hamburger.png
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\images\landing-page-image.png
-C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\images\MT125.png
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\images\tick.png
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\images\up-arrow.png
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\js\site.js
@@ -36,6 +34,7 @@ C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\LICENSE
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\fonts\florencesans-sc.black.ttf
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
@@ -48,16 +47,19 @@ C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\wwwroot\sitemap.xml
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\appsettings.json
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\LearnerBikes.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\LearnerBikes.runtimeconfig.json
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\LearnerBikes.pdb
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\AspNetCore.SEOHelper.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.Identity.Client.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Logging.dll
@@ -66,6 +68,7 @@ C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\System.Runtime.Caching.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Release\net5.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll

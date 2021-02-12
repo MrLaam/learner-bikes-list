@@ -31,6 +31,9 @@ namespace LearnerBikes.Migrations
                     b.Property<int>("DryWeight")
                         .HasColumnType("int");
 
+                    b.Property<string>("Engine")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
@@ -54,6 +57,12 @@ namespace LearnerBikes.Migrations
 
                     b.Property<double>("TankCapacity")
                         .HasColumnType("float");
+
+                    b.Property<string>("ThumbnailUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Transmission")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("WetWeight")
                         .HasColumnType("int");

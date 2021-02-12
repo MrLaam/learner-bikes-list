@@ -69,9 +69,10 @@
     border-radius: 5px;
 }
 
-.form-wrapper h4 {
+.form-wrapper h2 {
     margin: 10px 0 10px;
     float: left;
+    font-size: 1.3em;
 }
 
 .form-wrapper input[type=text], .form-wrapper input[type=email], .form-wrapper textarea {
@@ -108,11 +109,10 @@
     font-size: calc(min(max(2rem, 4vw), 16px));
     display: inline-block;
     width: 100%;
+    text-align: center;
 }
 
 .tick-image {
-    float: left;
-    padding-right: 10px;
 }
 
 .form-wrapper p {
@@ -141,7 +141,7 @@
         padding: 0;
     }
 
-    .title-tick-wrapper h2 {
+    .title-tick-wrapper h1 {
         text-align: center;
     }
 }

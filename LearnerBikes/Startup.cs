@@ -1,3 +1,4 @@
+using AspNetCore.SEOHelper;
 using LearnerBikes.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -49,6 +50,8 @@ namespace LearnerBikes
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseXMLSitemap(env.ContentRootPath);
 
             app.UseAuthorization();
 
