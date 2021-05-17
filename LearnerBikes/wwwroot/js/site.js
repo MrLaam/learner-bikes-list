@@ -50,6 +50,7 @@ function toggleFilter(id) {
 /*Motorcycle filtering*/
 function applyFilters() {
     document.getElementById("bikeFilterForm").submit();
+    console.log("YES");
 }
 /**/
 

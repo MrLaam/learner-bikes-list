@@ -9,23 +9,23 @@ namespace LearnerBikes.Helpers
     public class BikeFilterHelper
     {
 
-        public BikeListViewModel applyFilters(BikeListViewModel viewModel)
+        public BikeListViewModel applyFilters(BikeListViewModel viewModel, string sortOrder, string make, int? age, string type)
         {
 
-            if (viewModel.BikeFilters == null)
+            if (sortOrder == null && make == null && (age == 0 || age == null) && type == null)
             {
                 viewModel.Bikes = viewModel.Bikes.OrderBy(s => s.Make).ThenBy(s => s.Model);
                 return viewModel;
             }
 
-            if (viewModel.BikeFilters.Make.Equals("Any Make"))
+            if (make.Equals("Any Make"))
             {
             } else
             {
-                viewModel.Bikes = viewModel.Bikes.Where(s => s.Make.Contains(viewModel.BikeFilters.Make));
+                viewModel.Bikes = viewModel.Bikes.Where(s => s.Make.Contains(make));
             }
 
-            if (viewModel.BikeFilters.Age.Equals(0))
+            if (age.Equals(0))
             {
             }
             else
@@ -33,28 +33,28 @@ namespace LearnerBikes.Helpers
                 DateTime moment = DateTime.Now;
                 int currentYear = moment.Year;
 
-                if (viewModel.BikeFilters.Age <= 5)
+                if (age <= 5)
                 {
-                    viewModel.Bikes = viewModel.Bikes.Where(s => s.MinYear >= (currentYear - viewModel.BikeFilters.Age) || s.MaxYear >= (currentYear - viewModel.BikeFilters.Age));
+                    viewModel.Bikes = viewModel.Bikes.Where(s => s.MinYear >= (currentYear - age) || s.MaxYear >= (currentYear - age));
                 } else
                 {
-                    viewModel.Bikes = viewModel.Bikes.Where(s => s.MinYear < (currentYear - viewModel.BikeFilters.Age) || s.MaxYear < (currentYear - viewModel.BikeFilters.Age));
+                    viewModel.Bikes = viewModel.Bikes.Where(s => s.MinYear < (currentYear - age) || s.MaxYear < (currentYear - age));
                 }
                 
             }
 
-            if (viewModel.BikeFilters.Type.Equals("Any Type"))
+            if (type.Equals("Any Type"))
             {
             }
             else
             {
-                viewModel.Bikes = viewModel.Bikes.Where(s => s.BikeType.Contains(viewModel.BikeFilters.Type));
+                viewModel.Bikes = viewModel.Bikes.Where(s => s.BikeType.Contains(type));
             }
 
-            if (viewModel.BikeFilters.SortOrder.Equals("[A-Z]"))
+            if (sortOrder.Equals("[A-Z]"))
             {
                 viewModel.Bikes = viewModel.Bikes.OrderBy(s => s.Make).ThenBy(s => s.Model);
-            } else if (viewModel.BikeFilters.SortOrder.Equals("[Z-A]"))
+            } else if (sortOrder.Equals("[Z-A]"))
             {
                 viewModel.Bikes = viewModel.Bikes.OrderByDescending(s => s.Make).ThenBy(s => s.Model);
             }

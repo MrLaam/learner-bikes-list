@@ -9,6 +9,7 @@ C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\ref\Learn
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\LearnerBikes.pdb
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\LearnerBikes.Views.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\LearnerBikes.Views.pdb
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\AspNetCore.SEOHelper.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Humanizer.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
@@ -16,6 +17,7 @@ C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.Identity.Client.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
@@ -24,6 +26,7 @@ C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\System.Runtime.Caching.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
@@ -71,6 +74,3 @@ C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Debug\net5.0\LearnerBi
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Debug\net5.0\ref\LearnerBikes.dll
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Debug\net5.0\LearnerBikes.pdb
 C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\obj\Debug\net5.0\LearnerBikes.genruntimeconfig.cache
-C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\jorda\source\repos\LearnerBikes\LearnerBikes\bin\Debug\net5.0\AspNetCore.SEOHelper.dll

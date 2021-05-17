@@ -1,6 +1,7 @@
 ﻿using LearnerBikes.Data;
 using LearnerBikes.Helpers;
 using LearnerBikes.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -18,15 +19,56 @@ namespace LearnerBikes.Controllers
             _db = db;
         }
 
-        public IActionResult Index(BikeListViewModel model, BikeFiltersForm filters, int page = 1)
-        {          
+        public IActionResult Index(BikeListViewModel model, int page)
+        {
+            //TODO Handle null reference properly
+            //model.BikeFilters.SortOrder ? ViewBag.SortOrder = model.BikeFilters.SortOrder : "[A-Z]";
+
+            if(model.BikeFilters == null)
+            {
+            } else
+            {
+            if (HttpContext.Session.GetString("SortOrder") == null)
+            {
+                HttpContext.Session.SetString("SortOrder", "[A-Z]");
+            } else
+            {
+                HttpContext.Session.SetString("SortOrder", model.BikeFilters.SortOrder);
+            }
+
+            if (HttpContext.Session.GetString("Make") == null)
+            {
+                HttpContext.Session.SetString("Make", "Any Make");
+            }
+            else
+            {
+                HttpContext.Session.SetString("Make", model.BikeFilters.Make);
+            }
+
+                HttpContext.Session.SetInt32("Age", model.BikeFilters.Age);
+
+            if (HttpContext.Session.GetString("Type") == null)
+            {
+                HttpContext.Session.SetString("Type", "Any Type");
+            }
+            else
+            {
+                HttpContext.Session.SetString("Type", model.BikeFilters.Type);
+            }
+            }
+            
+
             model.Bikes = _db.Bikes;
-            model.BikePerPage = 30;
-            model.CurrentPage = page;
+            model.BikePerPage = 1;
+            if (page == 0) {
+                model.CurrentPage = 1;
+            } else {
+                model.CurrentPage = page;
+            }        
             BikeFilterHelper helper = new BikeFilterHelper();
 
-                model = helper.applyFilters(model);
-
+                model = helper.applyFilters(model, HttpContext.Session.GetString("SortOrder"), HttpContext.Session.GetString("Make"), HttpContext.Session.GetInt32("Age"), HttpContext.Session.GetString("Type"));
+        
                 return View(model);
         }
 

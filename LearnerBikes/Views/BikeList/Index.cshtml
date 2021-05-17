@@ -1,7 +1,12 @@
 ﻿@model LearnerBikes.Models.BikeListViewModel
+@using Microsoft.AspNetCore.Http;
 
 @{
     ViewData["Title"] = "Browse";
+    string sortOrder = Context.Session.GetString("SortOrder") ?? "(A-Z)";
+    string bikeMake = Context.Session.GetString("Make") ?? "Make (Any)";
+    int? age = Context.Session.GetInt32("Age") ?? 0;
+    string type = Context.Session.GetString("Type") ?? "Type (Any)";
 }
 
 <link rel="stylesheet" href="~/css/bikelist.css" />
@@ -14,14 +19,14 @@
 
         <div class="filter-wrapper" id="filter">
 
-            <form id="bikeFilterForm" onchange="applyFilters()" asp-action="Index" asp-controller="BikeList">
+            <form id="bikeFilterForm" onload="applyFilters()" onchange="applyFilters()" asp-action="Index" asp-controller="BikeList">
 
                 <div class="sort-filter">
                     <div class="select-dropdown-wrapper">
-                        <label for="selectDropdown" class="filter-title">Sort by:</label>
+                        <label for="selectDropdown" class="filter-title">Sort by:</label>                  
                         <select id="selectDropdown" class="select-dropdown sort-dropdown" asp-for="BikeFilters.SortOrder">
-                            <option selected="selected" value="[A-Z]">Name (A-Z)</option>
-                            <option value="[Z-A]">Name (Z-A)</option>
+                                <option selected="selected" value="@sortOrder">Name @sortOrder</option>
+                                <option value="[Z-A]">Name (Z-A)</option>
                         </select>
                     </div>
                 </div>
@@ -30,9 +35,22 @@
                     <div class="select-dropdown-wrapper">
                         <label for="makeFilter" class="filter-title" id="make-title">Make</label>
                         <select id="makeFilter" class="select-dropdown" asp-for="BikeFilters.Make">
-                            <option selected="selected" value="Any Make">Make (Any)</option>
-                            @foreach(var make in Model.Bikes.OrderBy(s => s.Make).Select(s => s.Make).Distinct())
+                            @if (bikeMake.Equals("Make (Any)") || bikeMake.Equals("Any Make"))
                             {
+                            <option selected="selected" value="Any Make">Make (Any)</option>
+                            }
+                            else
+                            {
+                                <option value="Any Make">Make (Any)</option>
+                                <option selected="selected" value="@bikeMake">@bikeMake</option>
+                            }
+
+                            @foreach (var make in Model.Bikes.OrderBy(s => s.Make).Select(s => s.Make).Distinct())
+                            {
+                                @if (make.Equals(bikeMake))
+                                {
+                                    continue;
+                                }
                                 <option value="@make">@make</option>
                             }
                         </select>
@@ -43,13 +61,46 @@
                     <div class="select-dropdown-wrapper">
                         <label for="bikeAgeFilter" class="filter-title">Age</label>
                         <select id="bikeAgeFilter" class="select-dropdown" asp-for="BikeFilters.Age">
-                            <option selected="selected" value="0">Up To (Any)</option>
-                            <option value="1">Up to 1 year</option>
-                            <option value="2">Up to 2 years</option>
-                            <option value="3">Up to 3 years</option>
-                            <option value="4">Up to 4 years</option>
-                            <option value="5">Up to 5 years</option>
-                            <option value="6">Over 5 years</option>
+                            @if (age == 0)
+                            {
+                                <option selected="selected" value="0">Up To (Any)</option>
+                            }
+                            else
+                            {
+                                <option value="0">Up To (Any)</option>
+                            }
+
+                            @for (int x = 1; x <= 6; x++)
+                            {
+                                if (x == age)
+                                {
+                                    if (age == 1)
+                                    {
+                                        <option selected="selected" value="1">Up to 1 year</option>
+                                    }
+                                    else if (age == 6)
+                                    {
+                                        <option selected="selected" value="6">Over 5 years</option>
+                                    }
+                                    else
+                                    {
+                                        <option selected="selected" value="@age">Up to @age years</option>
+                                    }
+                                    continue;
+                                }
+                                if (x == 1)
+                                {
+                                    <option value="1">Up to 1 year</option>
+                                }
+                                else if (x == 6)
+                                {
+                                    <option value="@x">Over 5 years</option>
+                                }
+                                else
+                                {
+                                    <option value="@x">Up to @x years</option>
+                                }
+                            }
                         </select>
                     </div>
                 </div>
@@ -58,10 +109,27 @@
                     <div class="select-dropdown-wrapper">
                         <label for="bikeTypeFilter" class="filter-title">Bike Type</label>
                         <select id="bikeTypeFilter" class="select-dropdown" asp-for="BikeFilters.Type">
-                            <option selected="selected" value="Any Type">Type (Any)</option>
+                            @if (type.Equals("Type (Any)") || type.Equals("Any Type"))
+                            {
+                                <option selected="selected" value="Any Type">Type (Any)</option>
+                            }
+                            else
+                            {
+                                <option value="Any Type">Type (Any)</option>
+                                <option selected="selected" value="@type">@type</option>
+                            }
+
                             @foreach (var bikeType in Model.Bikes.OrderBy(s => s.BikeType).Select(s => s.BikeType).Distinct())
                             {
-                                <option value="@bikeType">@bikeType</option>
+                                if (bikeType.Equals(type))
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    <option value="@bikeType">@bikeType</option>
+                                }
+
                             }
                         </select>
                     </div>
@@ -112,10 +180,9 @@
                 <ul class="pagination">
                     <li class="next-prev"><a asp-controller="BikeList" asp-action="Index" asp-route-page="@prevPageNo" class="next-prev-link @prevDisabled">Previous</a></li>
                     @for (int i = Model.PageCount(7, 5, 3, 7).Item1; i <= Model.PageCount(7, 5, 3, 7).Item2; i++) {
-                        <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
+                        <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")" onclick="applyFilters()">
                             <a class="page-link" asp-controller="BikeList" asp-action="Index" asp-route-page="@{@i}">@i</a>
                         </li>
-
                     }
                     <li class="next-prev"><a asp-controller="BikeList" asp-action="Index" asp-route-page="@nextPageNo" class="next-prev-link @nextDisabled">Next</a></li>
                 </ul>
@@ -126,7 +193,7 @@
                     <li class="next-prev"><a asp-controller="BikeList" asp-action="Index" asp-route-page="@prevPageNo" class="next-prev-link @prevDisabled">&#8249;</a></li>
                     @for (int i = Model.PageCount(5, 4, 2, 5).Item1; i <= Model.PageCount(5, 4, 2, 5).Item2; i++)
                     {
-                        <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")">
+                        <li class="@(i == Model.CurrentPage ? "page-item active" : "page-item")" onclick="applyFilters()">
                             <a class="page-link" asp-controller="BikeList" asp-action="Index" asp-route-page="@{@i}">@i</a>
                         </li>
 

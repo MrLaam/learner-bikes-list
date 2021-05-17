@@ -337,7 +337,7 @@ select:hover {
     }
 
     .filter-wrapper {
-        display: block;
+        display: block !important;
     }
 }
 
