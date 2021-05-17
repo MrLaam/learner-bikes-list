@@ -18,13 +18,6 @@ namespace LearnerBikes.Helpers
                 return viewModel;
             }
 
-            if (make.Equals("Any Make"))
-            {
-            } else
-            {
-                viewModel.Bikes = viewModel.Bikes.Where(s => s.Make.Contains(make));
-            }
-
             if (age.Equals(0))
             {
             }
@@ -51,10 +44,23 @@ namespace LearnerBikes.Helpers
                 viewModel.Bikes = viewModel.Bikes.Where(s => s.BikeType.Contains(type));
             }
 
-            if (sortOrder.Equals("[A-Z]"))
+            if (make.Equals("Any Make"))
+            {
+            }
+            else if (sortOrder.Equals("(A-Z)"))
+            {
+                viewModel.Bikes = viewModel.Bikes.Where(s => s.Make.Contains(make)).OrderBy(s => s.Make).ThenBy(s => s.Model);
+                return viewModel;
+            } else if (sortOrder.Equals("(Z-A)"))
+            {
+                viewModel.Bikes = viewModel.Bikes.Where(s => s.Make.Contains(make)).OrderByDescending(s => s.Make).ThenBy(s => s.Model);
+                return viewModel;
+            }
+
+            if (sortOrder.Equals("(A-Z)"))
             {
                 viewModel.Bikes = viewModel.Bikes.OrderBy(s => s.Make).ThenBy(s => s.Model);
-            } else if (sortOrder.Equals("[Z-A]"))
+            } else if (sortOrder.Equals("(Z-A)"))
             {
                 viewModel.Bikes = viewModel.Bikes.OrderByDescending(s => s.Make).ThenBy(s => s.Model);
             }

@@ -28,15 +28,15 @@ namespace LearnerBikes.Controllers
             {
             } else
             {
-            if (HttpContext.Session.GetString("SortOrder") == null)
+            if (HttpContext.Session.GetString("SortOrder") == null && model.BikeFilters.SortOrder == null)
             {
-                HttpContext.Session.SetString("SortOrder", "[A-Z]");
+                HttpContext.Session.SetString("SortOrder", "(A-Z)");
             } else
             {
                 HttpContext.Session.SetString("SortOrder", model.BikeFilters.SortOrder);
             }
 
-            if (HttpContext.Session.GetString("Make") == null)
+            if (HttpContext.Session.GetString("Make") == null && model.BikeFilters.Make == null)
             {
                 HttpContext.Session.SetString("Make", "Any Make");
             }
@@ -47,7 +47,7 @@ namespace LearnerBikes.Controllers
 
                 HttpContext.Session.SetInt32("Age", model.BikeFilters.Age);
 
-            if (HttpContext.Session.GetString("Type") == null)
+            if (HttpContext.Session.GetString("Type") == null && model.BikeFilters.Type == null)
             {
                 HttpContext.Session.SetString("Type", "Any Type");
             }

@@ -25,8 +25,17 @@
                     <div class="select-dropdown-wrapper">
                         <label for="selectDropdown" class="filter-title">Sort by:</label>                  
                         <select id="selectDropdown" class="select-dropdown sort-dropdown" asp-for="BikeFilters.SortOrder">
-                                <option selected="selected" value="@sortOrder">Name @sortOrder</option>
-                                <option value="[Z-A]">Name (Z-A)</option>
+                            @if (sortOrder.Equals("(A-Z)"))
+                            {
+                                <option selected="selected" value="(A-Z)">Name @sortOrder</option>
+                                <option value="(Z-A)">Name (Z-A)</option>
+                            }
+                            else
+                            {
+                                <option selected="selected" value="(Z-A)">Name @sortOrder</option>
+                                <option value="(A-Z)">Name (A-Z)</option>
+                            }
+
                         </select>
                     </div>
                 </div>
