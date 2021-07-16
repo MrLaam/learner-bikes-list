@@ -19,10 +19,14 @@ namespace LearnerBikes.Controllers
             _db = db;
         }
 
-        public IActionResult Index(BikeListViewModel model, int page)
+        public IActionResult Index(BikeListViewModel model, int page, bool? resetFilters)
         {
             //TODO Handle null reference properly
             //model.BikeFilters.SortOrder ? ViewBag.SortOrder = model.BikeFilters.SortOrder : "[A-Z]";
+
+            if (resetFilters == true) {
+                HttpContext.Session.Clear();
+            }
 
             if(model.BikeFilters == null)
             {
@@ -59,7 +63,7 @@ namespace LearnerBikes.Controllers
             
 
             model.Bikes = _db.Bikes;
-            model.BikePerPage = 1;
+            model.BikePerPage = 30;
             if (page == 0) {
                 model.CurrentPage = 1;
             } else {

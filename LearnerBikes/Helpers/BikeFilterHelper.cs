@@ -53,7 +53,7 @@ namespace LearnerBikes.Helpers
                 return viewModel;
             } else if (sortOrder.Equals("(Z-A)"))
             {
-                viewModel.Bikes = viewModel.Bikes.Where(s => s.Make.Contains(make)).OrderByDescending(s => s.Make).ThenBy(s => s.Model);
+                viewModel.Bikes = viewModel.Bikes.Where(s => s.Make.Contains(make)).OrderByDescending(s => s.Make).ThenByDescending(s => s.Model);
                 return viewModel;
             }
 
