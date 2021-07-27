@@ -16,7 +16,7 @@ Here's a glimpse of an earlier iteration of the site above. Changing to a now wh
 * [Technologies](#technologies)
 
 ## General info
-This project was chosen as a way to demonstrate frontend and backend skills (web dev. and ASP.NET). The site is fully responsive on all devices, with consideration of horizontal and vertical landscapes. Best coding pracices have been adopted from clear variable naming to MVC structuring. The design was created via a high fidelity mockup in AdobeXD.
+This project was chosen as a way to demonstrate frontend and backend skills (vanilla HTML & CSS and ASP.NET MVC). The site is fully responsive on all devices, with consideration of horizontal and vertical landscapes. Best coding pracices have been adopted from clear variable naming to MVC structuring. The design was created via a high fidelity mockup in AdobeXD.
 
 ![adobemockup](https://user-images.githubusercontent.com/57018671/103926372-bdc40980-5110-11eb-9bef-e9628acab40d.PNG)
 	
